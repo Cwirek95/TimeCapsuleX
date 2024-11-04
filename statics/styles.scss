@@ -1,0 +1,150 @@
+/* ------------------------ Variables ------------------------ */
+$main-color: #F9E6BE;
+$second-color: #151924;
+$third-color: #53A7C1;
+$highlight-color: rgba(255, 255, 255, 0.3);
+$card-color: rgba(255, 255, 255, 0.2);
+/* ------------------------ End Variables ------------------------  */
+
+/* ------------------------ Basic ------------------------ */
+body {
+  background-color: $main-color;
+  color: $second-color;
+  background-image: radial-gradient(circle, $highlight-color 0%, $main-color 70%);
+  background-size: cover;
+}
+/* ------------------------ End Basic ------------------------ */
+
+/* ------------------------ Header ------------------------ */
+.svg-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.header-title {
+  color: $main-color;
+}
+
+.header-title-x {
+  color: $third-color;
+}
+
+.nav-link {
+  color: $second-color;
+  padding: 6px 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: color 0.3s ease, background-color 0.5s ease;
+
+  &:hover {
+    color: $main-color;
+    background-color: $second-color;
+  }
+}
+
+.transparent-card {
+  background-color: $card-color;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(5px);
+  border: 1px solid $highlight-color;
+}
+/* ------------------------ End Header ------------------------ */
+
+.content {
+  position: relative;
+  z-index: 10;
+}
+
+/* ------------------------ Section ------------------------ */
+section {
+  background-image: radial-gradient(circle, $highlight-color 0%, $main-color 70%);
+  background-size: cover;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.bg-section {
+  background-color: $main-color;
+}
+/* ------------------------ End Section ------------------------ */
+
+/* ------------------------ Footer ------------------------ */
+footer {
+  background-color: $second-color;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+/* ------------------------ End Footer ------------------------ */
+
+/* ------------------------ Effects ------------------------ */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ------------------------ End Effects ------------------------ */
+
+/* ------------------------ Buttons ------------------------ */
+.join-button {
+  background-color: $second-color;
+  color: $main-color;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.25);
+    opacity: 0.9;
+  }
+}
+
+.join-button-mobile {
+  background-color: white;
+  color: $second-color;
+  font-weight: 600;
+  padding: 4px 30px;
+  border-radius: 4px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+
+  &:hover {
+    background-color: $main-color;
+    transform: scale(1.05);
+    box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.25);
+    opacity: 0.9;
+  }
+}
+
+.check-it-button {
+  background-color: $second-color;
+  color: white;
+  font-weight: 600;
+  padding: 10px 30px;
+  border-radius: 8px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.25);
+    opacity: 0.9;
+  }
+}
+/* ------------------------ End Buttons ------------------------ */
