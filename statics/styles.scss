@@ -68,6 +68,8 @@ section {
 .section-title {
   font-size: 2.5rem;
   font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .bg-section {
@@ -148,3 +150,55 @@ footer {
   }
 }
 /* ------------------------ End Buttons ------------------------ */
+
+/* ------------------------ Step Cards ------------------------ */
+.step-card {
+  background-color: $card-color;
+  color: $second-color;
+  border-radius: 8px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  position: relative;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.step-number {
+  background-color: $second-color;
+  color: $main-color;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+}
+
+.step-icon {
+  color: $third-color;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.step-title {
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.step-description {
+  color: $second-color;
+  font-size: 1rem;
+}
+/* ------------------------ End Step Cards ------------------------ */
