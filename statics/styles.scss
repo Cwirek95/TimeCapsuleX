@@ -202,3 +202,57 @@ footer {
   font-size: 1rem;
 }
 /* ------------------------ End Step Cards ------------------------ */
+
+/* ------------------------ Capsules ------------------------ */
+.capsules-section {
+  background-color: $second-color;
+  background-image: none;
+  padding: 3rem 0;
+
+  .container {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .capsules-title {
+    color: $main-color;
+  }
+
+  .capsule-item {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid $third-color;
+
+    .capsule-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 5rem;
+      height: 5rem;
+      padding: 0;
+      border-radius: 50%;
+      background-color: $main-color;
+      color: $second-color;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    .ml-6 {
+      margin-left: 1.5rem;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: $main-color;
+      margin: 0; /* Usuń odstępy */
+    }
+
+    p {
+      margin-top: 0.25rem;
+      color: $third-color;
+    }
+  }
+}
+/* ------------------------ End Capsules ------------------------ */
