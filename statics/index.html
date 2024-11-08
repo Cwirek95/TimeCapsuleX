@@ -104,9 +104,9 @@
         </div>
     </section>
 
-    <section class="capsules-section py-12">
+    <section class="capsules-section">
         <div class="mx-auto max-w-3xl flex flex-col gap-2 px-4">
-            <h1 class="section-title uppercase capsules-title mb-8">Types of Capsules</h1>
+            <h1 class="section-title uppercase capsules-title mb-8">Capsules</h1>
             <div class="capsule-item flex items-start">
                 <div class="capsule-icon p-4 rounded-full">
                     <i class="fas fa-clock text-3xl"></i>
@@ -161,7 +161,27 @@
 
     <section class="bg-section py-20">
         <div class="container mx-auto text-center">
-            <h1 class="section-title uppercase">Contact</h1>
+            <h1 class="section-title uppercase mb-8">Contact</h1>
+            <div class="contact-section flex flex-col md:flex-row gap-10 p-5">
+                <div class="contact-left w-full md:w-1/2 flex flex-col items-center justify-center p-5">
+                    <h2 class="text-3xl font-semibold mb-6 text-center">Let's Talk About Your Problem</h2>
+                    <div class="social-icons flex justify-center gap-3 mb-4 text-2xl">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <p class="text-center text-lg">Email: <a href="mailto:acwiertniak95@gmail.com">acwiertniak95@gmail.com</a></p>
+                </div>
+
+                <div class="contact-right w-full md:w-1/2 flex flex-col items-center justify-center p-5">
+                    <form class="flex flex-col gap-5 w-full max-w-md">
+                        <input type="text" id="name" name="name" placeholder="First Name..." required>
+                        <input type="email" id="email" name="email" placeholder="Email address..." required>
+                        <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
+                        <button class="contact-button w-40 self-center" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
 </main>

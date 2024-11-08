@@ -2,6 +2,7 @@
 $main-color: #F9E6BE;
 $second-color: #151924;
 $third-color: #53A7C1;
+$input-focus-color: #FDF1D6;
 $highlight-color: rgba(255, 255, 255, 0.3);
 $card-color: rgba(255, 255, 255, 0.2);
 /* ------------------------ End Variables ------------------------  */
@@ -149,6 +150,22 @@ footer {
     opacity: 0.9;
   }
 }
+
+.contact-button {
+  background-color: $second-color;
+  color: $main-color;
+  padding: 10px 30px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.25);
+    opacity: 0.9;
+  }
+}
 /* ------------------------ End Buttons ------------------------ */
 
 /* ------------------------ Step Cards ------------------------ */
@@ -256,3 +273,92 @@ footer {
   }
 }
 /* ------------------------ End Capsules ------------------------ */
+
+/* ------------------------ Contact Section ------------------------ */
+.contact-left, .contact-right {
+  width: 50%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-left h2 {
+  font-size: 2em;
+  color: $second-color;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: $second-color;
+  font-size: 2.5rem;
+  text-decoration: none;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+  &:hover {
+    opacity: 0.9;
+    transform: scale(1.3);
+  }
+}
+
+.contact-left p {
+  text-align: center;
+  font-size: 1.3em;
+  color: $second-color;
+  margin-top: 20px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.contact-right form label {
+  font-size: 16px;
+  color: $second-color;
+  margin-top: 10px;
+}
+
+.contact-right form input,
+.contact-right form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  background-color: $main-color;
+  color: $second-color;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1em;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  &::placeholder {
+    color: $second-color;
+    opacity: 0.6;
+  }
+}
+
+.contact-right form input:focus,
+.contact-right form textarea:focus {
+  background-color: $input-focus-color;
+  border-color: $third-color;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.contact-right form input:focus, .contact-right form textarea:focus {
+  border-bottom: 2px solid $third-color;
+}
+
+.contact-right form textarea {
+  resize: none;
+}
+/* ------------------------ End Contact Section ------------------------ */
