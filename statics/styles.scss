@@ -78,15 +78,6 @@ section {
 }
 /* ------------------------ End Section ------------------------ */
 
-/* ------------------------ Footer ------------------------ */
-footer {
-  background-color: $second-color;
-  color: white;
-  text-align: center;
-  padding: 10px 0;
-}
-/* ------------------------ End Footer ------------------------ */
-
 /* ------------------------ Effects ------------------------ */
 .fade-in {
   opacity: 0;
@@ -166,9 +157,24 @@ footer {
     opacity: 0.9;
   }
 }
+
+.top-button {
+  background-color: $second-color;
+  color: $main-color;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.25);
+    opacity: 0.9;
+  }
+}
 /* ------------------------ End Buttons ------------------------ */
 
-/* ------------------------ Step Cards ------------------------ */
+/* ------------------------ How It Works ------------------------ */
 .step-card {
   background-color: $card-color;
   color: $second-color;
@@ -218,7 +224,7 @@ footer {
   color: $second-color;
   font-size: 1rem;
 }
-/* ------------------------ End Step Cards ------------------------ */
+/* ------------------------ End How It Works ------------------------ */
 
 /* ------------------------ Capsules ------------------------ */
 .capsules-section {
@@ -274,7 +280,7 @@ footer {
 }
 /* ------------------------ End Capsules ------------------------ */
 
-/* ------------------------ Contact Section ------------------------ */
+/* ------------------------ Contact ------------------------ */
 .contact-left, .contact-right {
   width: 50%;
   padding: 40px;
@@ -361,4 +367,12 @@ footer {
 .contact-right form textarea {
   resize: none;
 }
-/* ------------------------ End Contact Section ------------------------ */
+/* ------------------------ End Contact ------------------------ */
+
+/* ------------------------ Footer ------------------------ */
+footer {
+  color: $second-color;
+  text-align: center;
+  padding: 10px 0;
+}
+/* ------------------------ End Footer ------------------------ */

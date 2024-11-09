@@ -71,15 +71,6 @@ section {
 }
 
 /* ------------------------ End Section ------------------------ */
-/* ------------------------ Footer ------------------------ */
-footer {
-  background-color: #151924;
-  color: white;
-  text-align: center;
-  padding: 10px 0;
-}
-
-/* ------------------------ End Footer ------------------------ */
 /* ------------------------ Effects ------------------------ */
 .fade-in {
   opacity: 0;
@@ -155,8 +146,22 @@ footer {
   opacity: 0.9;
 }
 
+.top-button {
+  background-color: #151924;
+  color: #F9E6BE;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.top-button:hover {
+  transform: scale(1.05);
+  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.25);
+  opacity: 0.9;
+}
+
 /* ------------------------ End Buttons ------------------------ */
-/* ------------------------ Step Cards ------------------------ */
+/* ------------------------ How It Works ------------------------ */
 .step-card {
   background-color: rgba(255, 255, 255, 0.2);
   color: #151924;
@@ -206,7 +211,7 @@ footer {
   font-size: 1rem;
 }
 
-/* ------------------------ End Step Cards ------------------------ */
+/* ------------------------ End How It Works ------------------------ */
 /* ------------------------ Capsules ------------------------ */
 .capsules-section {
   background-color: #151924;
@@ -254,7 +259,7 @@ footer {
 }
 
 /* ------------------------ End Capsules ------------------------ */
-/* ------------------------ Contact Section ------------------------ */
+/* ------------------------ Contact ------------------------ */
 .contact-left, .contact-right {
   width: 50%;
   padding: 40px;
@@ -340,6 +345,14 @@ footer {
   resize: none;
 }
 
-/* ------------------------ End Contact Section ------------------------ */
+/* ------------------------ End Contact ------------------------ */
+/* ------------------------ Footer ------------------------ */
+footer {
+  color: #151924;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* ------------------------ End Footer ------------------------ */
 
 /*# sourceMappingURL=styles.css.map */
