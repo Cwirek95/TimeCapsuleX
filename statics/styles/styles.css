@@ -303,12 +303,6 @@ section {
   text-decoration: underline;
 }
 
-.contact-right form label {
-  font-size: 16px;
-  color: #151924;
-  margin-top: 10px;
-}
-
 .contact-right form input,
 .contact-right form textarea {
   width: 100%;
