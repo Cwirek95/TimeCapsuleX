@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TimeCapsuleX</title>
-    <link rel="stylesheet" href="styles/register-styles.css">
+    <title>TimeCapsuleX - Create Account</title>
+    <link rel="stylesheet" href="styles/pages/register-styles.css">
 </head>
-<body class="bg-main-color text-second-color">
-
+<body>
 <div class="flex h-screen flex-col lg:flex-row">
-    <div class="w-full lg:w-2/3 bg-second-color flex items-center justify-center mx-auto relative p-5 md:p-10">
+    <div class="w-full lg:w-1/2 register-left-side flex items-center justify-center mx-auto relative p-5 md:p-10">
         <button class="back-button absolute top-4 left-4 md:left-5 md:top-5"><i class="fa fa-arrow-left"></i></button>
         <div class="flex flex-col gap-10 w-full">
             <h2 class="text-lg md:text-2xl font-bold uppercase text-center">Create New Account</h2>
@@ -19,14 +18,13 @@
                     <input class="md:text-sm" type="text" name="username" placeholder="Username..." required>
                     <input class="md:text-sm" type="password" name="password" placeholder="Your password..." required>
                     <input class="md:text-sm" type="password" name="confirm_password" placeholder="Confirm password..." required>
-                    <button class="register-button w-40 self-center" type="submit">Submit</button>
+                    <button class="register-button w-40 self-center" type="submit">Create</button>
                 </form>
             </div>
         </div>
     </div>
 
-    <!-- Right Side: Icons, Logo (hidden on small screens) -->
-    <div class="w-full lg:w-1/3 bg-main-color flex flex-col gap-5 items-center justify-center sm:justify-around p-8">
+    <div class="w-full lg:w-1/2 bg-main-color flex flex-col gap-5 items-center justify-center sm:justify-around p-8">
         <svg class="svg-background xl:w-[400px] xl:h-[400px] lg:w-[300px] lg:h-[300px] sm:w-[200px] sm:h-[200px] hidden md:flex" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="250" cy="250" r="250" fill="#151924"/>
             <image href="img/logo.png" x="100" y="100" width="300" height="300" preserveAspectRatio="xMidYMid meet"/>
@@ -36,7 +34,6 @@
         </div>
     </div>
 </div>
-
 </body>
 </html>
 

@@ -1,16 +1,167 @@
-@charset "UTF-8";
-/* ------------------------ Variables ------------------------ */
-/* ------------------------ End Variables ------------------------  */
-/* ------------------------ Basic ------------------------ */
+/* Core Colors */
+/* Special Colors */
+/* Shadows */
+/* Border Radius */
+/* Basic Reset */
 body {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica", sans-serif;
   background-color: #F9E6BE;
   color: #151924;
   background-image: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, #F9E6BE 70%);
   background-size: cover;
 }
 
-/* ------------------------ End Basic ------------------------ */
-/* ------------------------ Header ------------------------ */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: #151924;
+}
+
+.button, .section-contact .contact-right form .contact-button, .back-button, .check-it-button, .join-button-mobile, .top-button, .contact-button, .join-button {
+  font-weight: 600;
+  border-radius: 8px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+}
+.button:hover, .section-contact .contact-right form .contact-button:hover, .back-button:hover, .check-it-button:hover, .join-button-mobile:hover, .top-button:hover, .contact-button:hover, .join-button:hover {
+  transform: scale(1.05);
+  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.25);
+  opacity: 0.9;
+}
+
+/* Button Variants */
+.join-button {
+  background-color: #151924;
+  color: #F9E6BE;
+}
+
+.contact-button {
+  padding: 10px 30px;
+  background-color: #151924;
+  color: #F9E6BE;
+}
+
+.top-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #151924;
+  color: #F9E6BE;
+}
+
+.join-button-mobile {
+  background-color: white;
+  color: #151924;
+  padding: 4px 30px;
+}
+.join-button-mobile:hover {
+  background-color: #F9E6BE;
+}
+
+.check-it-button {
+  background-color: #151924;
+  color: #F9E6BE;
+  font-weight: 600;
+  padding: 10px 30px;
+}
+
+.back-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #F9E6BE;
+  color: #151924;
+}
+.back-button:hover {
+  transform: scale(1.05);
+}
+
+/* Inputs and Textareas */
+.input, .section-contact .contact-right form input,
+.section-contact .contact-right form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  background-color: #F9E6BE;
+  color: #151924;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1em;
+  transition: all 0.3s ease;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+}
+.input::placeholder, .section-contact .contact-right form input::placeholder,
+.section-contact .contact-right form textarea::placeholder {
+  color: #151924;
+  opacity: 0.6;
+}
+.input:focus, .section-contact .contact-right form input:focus,
+.section-contact .contact-right form textarea:focus {
+  background-color: #FDF1D6;
+  border-color: #53A7C1;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Form Layout */
+.form-section {
+  background-color: #F9E6BE;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #151924;
+}
+
+/* Header */
+.header {
+  position: relative;
+  background-color: #151924;
+  color: #F9E6BE;
+}
+
+/* Footer */
+.footer {
+  color: #151924;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* Section Styling */
+.section {
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, #F9E6BE 70%);
+  background-size: cover;
+  padding: 40px;
+}
+.section.capsules-section {
+  background-color: #151924;
+  padding: 3rem 0;
+}
+
+/* Fade-In Effect */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.main-header {
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, #F9E6BE 70%);
+  background-size: cover;
+}
+
+/* Header logo */
 .svg-background {
   position: absolute;
   top: 0;
@@ -26,6 +177,7 @@ body {
   color: #53A7C1;
 }
 
+/* Header Nav Links */
 .nav-link {
   color: #151924;
   padding: 6px 16px;
@@ -38,6 +190,7 @@ body {
   background-color: #151924;
 }
 
+/* Transparent Card for Header */
 .transparent-card {
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 15px;
@@ -47,306 +200,124 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-/* ------------------------ End Header ------------------------ */
-.content {
-  position: relative;
-  z-index: 10;
+.footer {
+  color: #151924;
+  text-align: center;
+  padding: 10px 0;
+}
+.footer .top-button {
+  margin-right: 10px;
 }
 
-/* ------------------------ Section ------------------------ */
-section {
+.section-how-it-works {
   background-image: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, #F9E6BE 70%);
   background-size: cover;
+  padding: 40px;
 }
-
-.section-title {
-  font-size: 2.5rem;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.bg-section {
-  background-color: #F9E6BE;
-}
-
-/* ------------------------ End Section ------------------------ */
-/* ------------------------ Effects ------------------------ */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeIn 1s ease-out forwards;
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-/* ------------------------ End Effects ------------------------ */
-/* ------------------------ Buttons ------------------------ */
-.join-button {
-  background-color: #151924;
-  color: #F9E6BE;
-  font-weight: 600;
-  border-radius: 8px;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
-}
-.join-button:hover {
-  transform: scale(1.05);
-  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.25);
-  opacity: 0.9;
-}
-
-.join-button-mobile {
-  background-color: white;
-  color: #151924;
-  font-weight: 600;
-  padding: 4px 30px;
-  border-radius: 4px;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
-}
-.join-button-mobile:hover {
-  background-color: #F9E6BE;
-  transform: scale(1.05);
-  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.25);
-  opacity: 0.9;
-}
-
-.check-it-button {
-  background-color: #151924;
-  color: white;
-  font-weight: 600;
-  padding: 10px 30px;
-  border-radius: 8px;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
-}
-.check-it-button:hover {
-  transform: scale(1.05);
-  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.25);
-  opacity: 0.9;
-}
-
-.contact-button {
-  background-color: #151924;
-  color: #F9E6BE;
-  padding: 10px 30px;
-  font-weight: 600;
-  border-radius: 8px;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
-}
-.contact-button:hover {
-  transform: scale(1.05);
-  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.25);
-  opacity: 0.9;
-}
-
-.top-button {
-  background-color: #151924;
-  color: #F9E6BE;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-.top-button:hover {
-  transform: scale(1.05);
-  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.25);
-  opacity: 0.9;
-}
-
-/* ------------------------ End Buttons ------------------------ */
-/* ------------------------ How It Works ------------------------ */
-.step-card {
+.section-how-it-works .step-card {
+  position: relative;
   background-color: rgba(255, 255, 255, 0.2);
   color: #151924;
   border-radius: 8px;
   padding: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
   text-align: center;
-  position: relative;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.step-card:hover {
+.section-how-it-works .step-card:hover {
   transform: scale(1.05);
   box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.25);
 }
-
-.step-number {
+.section-how-it-works .step-card .step-number {
+  position: absolute;
+  top: -15px;
+  left: 5%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
   background-color: #151924;
   color: #F9E6BE;
   font-size: 1.5rem;
   font-weight: bold;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  top: -10px;
-  left: -10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
-.step-icon {
+.section-how-it-works .step-card .step-icon {
   color: #53A7C1;
   font-size: 2.5rem;
   margin-bottom: 10px;
 }
-
-.step-title {
+.section-how-it-works .step-card .step-title {
   font-weight: bold;
   font-size: 1.25rem;
   margin-bottom: 5px;
   text-transform: uppercase;
 }
-
-.step-description {
+.section-how-it-works .step-card .step-description {
   color: #151924;
   font-size: 1rem;
 }
 
-/* ------------------------ End How It Works ------------------------ */
-/* ------------------------ Capsules ------------------------ */
-.capsules-section {
+.section-capsules {
   background-color: #151924;
-  background-image: none;
   padding: 3rem 0;
 }
-.capsules-section .container {
-  max-width: 640px;
-  margin: 0 auto;
-}
-.capsules-section .capsules-title {
+.section-capsules .capsules-title {
   color: #F9E6BE;
+  text-align: center;
+  margin-bottom: 20px;
 }
-.capsules-section .capsule-item {
+.section-capsules .capsule-item {
   display: flex;
   align-items: center;
   padding: 1.5rem 0;
   border-bottom: 1px solid #53A7C1;
 }
-.capsules-section .capsule-item .capsule-icon {
+.section-capsules .capsule-item .capsule-icon {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 5rem;
   height: 5rem;
-  padding: 0;
   border-radius: 50%;
   background-color: #F9E6BE;
   color: #151924;
   font-size: 1.5rem;
-  flex-shrink: 0;
 }
-.capsules-section .capsule-item .ml-6 {
-  margin-left: 1.5rem;
-}
-.capsules-section .capsule-item h3 {
+.section-capsules .capsule-item h3 {
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: bold;
   color: #F9E6BE;
-  margin: 0; /* Usuń odstępy */
 }
-.capsules-section .capsule-item p {
-  margin-top: 0.25rem;
+.section-capsules .capsule-item p {
   color: #53A7C1;
 }
 
-/* ------------------------ End Capsules ------------------------ */
-/* ------------------------ Contact ------------------------ */
-.contact-left, .contact-right {
-  width: 50%;
+.section-contact {
   padding: 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  background-color: #F9E6BE;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, #F9E6BE 70%);
+  background-size: cover;
 }
-
-.contact-left h2 {
-  font-size: 2em;
-  color: #151924;
-  margin-bottom: 20px;
+.section-contact .contact-left {
   text-align: center;
+  color: #151924;
 }
-
-.social-icons {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 10px;
+.section-contact .contact-left h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
-
-.social-icons a {
-  margin: 0 10px;
+.section-contact .contact-left .social-icons a {
   color: #151924;
   font-size: 2.5rem;
-  text-decoration: none;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  margin: 0 10px;
+  transition: transform 0.4s ease;
 }
-.social-icons a:hover {
-  opacity: 0.9;
+.section-contact .contact-left .social-icons a:hover {
   transform: scale(1.3);
 }
-
-.contact-left p {
-  text-align: center;
-  font-size: 1.3em;
-  color: #151924;
-  margin-top: 20px;
-}
-.contact-left p:hover {
-  text-decoration: underline;
-}
-
-.contact-right form input,
-.contact-right form textarea {
-  width: 100%;
-  padding: 12px;
-  margin-top: 5px;
-  background-color: #F9E6BE;
-  color: #151924;
-  border: 2px solid transparent;
-  border-radius: 8px;
-  outline: none;
-  font-size: 1em;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-.contact-right form input::placeholder,
-.contact-right form textarea::placeholder {
-  color: #151924;
-  opacity: 0.6;
-}
-
-.contact-right form input:focus,
-.contact-right form textarea:focus {
-  background-color: #FDF1D6;
-  border-color: #53A7C1;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  transform: translateY(-2px);
-}
-
-.contact-right form input:focus, .contact-right form textarea:focus {
-  border-bottom: 2px solid #53A7C1;
-}
-
-.contact-right form textarea {
-  resize: none;
-}
-
-/* ------------------------ End Contact ------------------------ */
-/* ------------------------ Footer ------------------------ */
-footer {
-  color: #151924;
-  text-align: center;
-  padding: 10px 0;
-}
-
-/* ------------------------ End Footer ------------------------ */
 
 /*# sourceMappingURL=styles.css.map */

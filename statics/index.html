@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TimeCapsuleX</title>
+    <title>TimeCapsuleX - Home</title>
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-<header class="relative flex items-start xl:h-[460px] md:h-[260px]">
+<header class="main-header relative flex items-start xl:h-[460px] md:h-[260px]">
     <div class="flex w-full justify-between items-center p-4 bg-[#151924] sm:hidden">
-        <img src="img/logo-mobile.png" alt="Logo" class="w-16 h-12">
+        <img src="img/logo-mobile.png" alt="Logo" class="w-12 h-12">
         <img src="img/logo-mobile-text.png" alt="TimeCapsuleX" class="w-48">
         <button id="menu-toggle" class="text-white text-lg">
             <i class="fas fa-bars"></i>
@@ -60,7 +60,7 @@
 </div>
 
 <main>
-    <section class="bg-section py-20">
+    <section class="section-how-it-works">
         <div class="container mx-auto text-center mb-8">
             <h1 class="section-title uppercase">How It Works</h1>
         </div>
@@ -104,7 +104,7 @@
         </div>
     </section>
 
-    <section class="capsules-section">
+    <section class="section-capsules">
         <div class="mx-auto max-w-3xl flex flex-col gap-2 px-4">
             <h1 class="section-title uppercase capsules-title mb-8">Capsules</h1>
             <div class="capsule-item flex items-start">
@@ -159,7 +159,7 @@
         </div>
     </section>
 
-    <section class="bg-section py-20">
+    <section class="section-contact">
         <div class="container mx-auto text-center">
             <h1 class="section-title uppercase mb-8">Contact</h1>
             <div class="contact-section flex flex-col md:flex-row gap-10 p-5">
@@ -186,7 +186,7 @@
     </section>
 </main>
 
-<footer class="flex sm:justify-between">
+<footer class="flex justify-between">
     <div></div>
     <span class="text-lg font-semibold self-center">Copyright &copy; 2024</span>
     <button class="top-button self-center mr-2"><i class="fa fa-arrow-up"></i></button>
@@ -201,5 +201,6 @@
         mobileMenu.classList.toggle('hidden');
     });
 </script>
+
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://kit.fontawesome.com/bd2d3af33f.js" crossorigin="anonymous"></script>

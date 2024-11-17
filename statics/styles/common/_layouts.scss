@@ -1,0 +1,27 @@
+@use 'variables' as *;
+
+/* Header */
+.header {
+  position: relative;
+  background-color: $second-color;
+  color: $main-color;
+}
+
+/* Footer */
+.footer {
+  color: $second-color;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* Section Styling */
+.section {
+  background-image: radial-gradient(circle, $highlight-color 0%, $main-color 70%);
+  background-size: cover;
+  padding: 40px;
+
+  &.capsules-section {
+    background-color: $second-color;
+    padding: 3rem 0;
+  }
+}

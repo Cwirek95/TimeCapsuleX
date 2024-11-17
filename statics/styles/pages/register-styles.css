@@ -1,0 +1,126 @@
+/* Core Colors */
+/* Special Colors */
+/* Shadows */
+/* Border Radius */
+.button, .register-section .register-button, .back-button, .check-it-button, .join-button-mobile, .top-button, .contact-button, .join-button {
+  font-weight: 600;
+  border-radius: 8px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+}
+.button:hover, .register-section .register-button:hover, .back-button:hover, .check-it-button:hover, .join-button-mobile:hover, .top-button:hover, .contact-button:hover, .join-button:hover {
+  transform: scale(1.05);
+  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.25);
+  opacity: 0.9;
+}
+
+/* Button Variants */
+.join-button {
+  background-color: #151924;
+  color: #F9E6BE;
+}
+
+.contact-button {
+  padding: 10px 30px;
+  background-color: #151924;
+  color: #F9E6BE;
+}
+
+.top-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #151924;
+  color: #F9E6BE;
+}
+
+.join-button-mobile {
+  background-color: white;
+  color: #151924;
+  padding: 4px 30px;
+}
+.join-button-mobile:hover {
+  background-color: #F9E6BE;
+}
+
+.check-it-button {
+  background-color: #151924;
+  color: #F9E6BE;
+  font-weight: 600;
+  padding: 10px 30px;
+}
+
+.back-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #F9E6BE;
+  color: #151924;
+}
+.back-button:hover {
+  transform: scale(1.05);
+}
+
+/* Inputs and Textareas */
+.input, .register-section form input,
+.register-section form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  background-color: #F9E6BE;
+  color: #151924;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1em;
+  transition: all 0.3s ease;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+}
+.input::placeholder, .register-section form input::placeholder,
+.register-section form textarea::placeholder {
+  color: #151924;
+  opacity: 0.6;
+}
+.input:focus, .register-section form input:focus,
+.register-section form textarea:focus {
+  background-color: #FDF1D6;
+  border-color: #53A7C1;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Form Layout */
+.form-section, .register-section {
+  background-color: #F9E6BE;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #151924;
+}
+
+body {
+  background-color: #F9E6BE;
+  color: #151924;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, #F9E6BE 70%);
+  background-size: cover;
+}
+
+/* Register Left Side */
+.register-left-side {
+  background-color: #151924;
+  color: #F9E6BE;
+}
+
+/* Register-Specific Styles */
+.register-section {
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, #F9E6BE 70%);
+  background-size: cover;
+  margin-bottom: 20px;
+}
+.register-section .register-button {
+  background-color: #151924;
+  color: #F9E6BE;
+  padding: 10px 0;
+}
+
+/*# sourceMappingURL=register-styles.css.map */

@@ -1,0 +1,50 @@
+@use '../common/variables' as *;
+@use '../common/buttons' as *;
+@use '../common/forms' as *;
+
+body {
+  background-color: $main-color;
+  color: $second-color;
+  background-image: radial-gradient(circle, $highlight-color 0%, $main-color 70%);
+  background-size: cover;
+}
+
+/* Login Left Side */
+.login-left-side {
+  background-color: $second-color;
+  color: $main-color;
+}
+
+/* Login-Specific Styles */
+.login-section {
+  @extend .form-section;
+  margin-bottom: 20px;
+  background-image: radial-gradient(circle, $highlight-color 0%, $main-color 70%);
+  background-size: cover;
+
+  form {
+    input,
+    textarea {
+      @extend .input;
+    }
+  }
+
+  .login-button {
+    @extend .button;
+    background-color: $second-color;
+    color: $main-color;
+    padding: 10px 0;
+  }
+}
+
+/* Login Social Icons */
+.social-icons a {
+  color: $second-color;
+  font-size: 2.5rem;
+  margin: 0 10px;
+  transition: transform 0.4s ease;
+
+  &:hover {
+    transform: scale(1.3);
+  }
+}

@@ -1,0 +1,38 @@
+@use '../common/variables' as *;
+@use '../common/buttons';
+@use '../common/forms';
+
+body {
+  background-color: $main-color;
+  color: $second-color;
+  background-image: radial-gradient(circle, $highlight-color 0%, $main-color 70%);
+  background-size: cover;
+}
+
+/* Register Left Side */
+.register-left-side {
+  background-color: $second-color;
+  color: $main-color;
+}
+
+/* Register-Specific Styles */
+.register-section {
+  @extend .form-section;
+  background-image: radial-gradient(circle, $highlight-color 0%, $main-color 70%);
+  background-size: cover;
+  margin-bottom: 20px;
+
+  form {
+    input,
+    textarea {
+      @extend .input;
+    }
+  }
+
+  .register-button {
+    @extend .button;
+    background-color: $second-color;
+    color: $main-color;
+    padding: 10px 0;
+  }
+}
