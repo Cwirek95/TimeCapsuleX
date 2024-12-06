@@ -1,0 +1,41 @@
+@use '../common/variables' as *;
+
+.section-capsules {
+  background-color: $second-color;
+  padding: 3rem 0;
+
+  .capsules-title {
+    color: $main-color;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .capsule-item {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid $third-color;
+
+    .capsule-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      background-color: $main-color;
+      color: $second-color;
+      font-size: 1.5rem;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: $main-color;
+    }
+
+    p {
+      color: $third-color;
+    }
+  }
+}

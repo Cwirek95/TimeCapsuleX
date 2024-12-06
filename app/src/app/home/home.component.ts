@@ -1,0 +1,234 @@
+import { Component } from "@angular/core";
+import { NgOptimizedImage } from "@angular/common";
+
+@Component({
+  selector: "app-home",
+  imports: [NgOptimizedImage],
+  template: `
+    <div class="main-content">
+      <header class="main-header relative flex items-start xl:h-[460px] md:h-[260px]">
+        <div class="mobile-header flex w-full justify-between items-center p-4 sm:hidden">
+          <img ngSrc="/img/logo-mobile.png" alt="Logo" width="694" height="775" class="w-12 h-12" />
+          <img ngSrc="/img/logo-mobile-text.png" alt="TimeCapsuleX" width="1033" height="132" class="w-48" />
+          <button id="menu-toggle" (click)="toggleMenu()" class="text-white text-lg">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+
+        <nav
+          id="mobile-menu"
+          [class.hidden]="isMenuHidden"
+          class="hidden mobile-menu flex-col text-white w-full sm:hidden absolute top-full left-0 z-10 p-4 space-y-2"
+        >
+          <div class="flex justify-center">
+            <button class="join-button-mobile">Join Now!</button>
+          </div>
+          <hr />
+          <a href="#" class="nav-link text-white block text-center py-2">Home</a>
+          <a href="#" class="nav-link text-white block text-center py-2">How It Works</a>
+          <a href="#" class="nav-link text-white block text-center py-2">Capsules</a>
+          <a href="#" class="nav-link text-white block text-center py-2">Contact</a>
+        </nav>
+
+        <svg
+          class="svg-background xl:w-[500px] xl:h-[460px] md:w-[300px] md:h-[260px] hidden md:flex"
+          viewBox="0 0 752 686"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="328.5" cy="262.5" r="423.5" fill="#151924" />
+          <image
+            href="/img/logo.png"
+            x="150"
+            y="100"
+            width="400"
+            height="400"
+            preserveAspectRatio="xMidYMid meet"
+          />
+        </svg>
+
+        <div
+          class="container mx-auto content hidden md:flex flex-col justify-center items-end py-4 relative z-10"
+        >
+          <div class="flex gap-2 xl:gap-20 lg:gap-10 items-center">
+            <nav class="flex xl:space-x-4 lg:space-x-2">
+              <a href="#" class="nav-link">Home</a>
+              <a href="#" class="nav-link">How It Works</a>
+              <a href="#" class="nav-link">Capsules</a>
+              <a href="#" class="nav-link">Contact</a>
+            </nav>
+            <button class="join-button mr-2 py-[10px] xl:px-[40px] md:px-[10px]">Join Now!</button>
+          </div>
+
+          <div class="xl:ml-96 text-left mt-4 xl:mt-16 self-center ml-96 mr-2 fade-in transparent-card">
+            <h1 class="text-3xl xl:text-5xl font-bold">Timeless Storage for Your Digital Legacy</h1>
+            <p class="hidden xl:flex mt-8 text-lg text-left fade-in" style="animation-delay: 0.3s;">
+              Digital capsules can be set to unlock at chosen moments, shared with loved ones, or stored as
+              part of a lasting digital legacy. Stories and memories, safely kept – now and forever
+            </p>
+            <button class="check-it-button mt-8">Let's check it out</button>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <div class="mobile-header md:hidden text-center mt-4 mx-4 self-center fade-in transparent-card">
+          <h1 class="text-3xl xl:text-5xl font-bold">Timeless Storage for Your Digital Legacy</h1>
+          <button class="check-it-button mt-8">Let's check it out</button>
+        </div>
+        <section class="section-how-it-works">
+          <div class="container mx-auto text-center mb-8">
+            <h1 class="section-title uppercase">How It Works</h1>
+          </div>
+          <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+            <div class="step-card">
+              <span class="step-number">1</span>
+              <i class="fas fa-user-plus step-icon"></i>
+              <h3 class="step-title">Sign Up</h3>
+              <p class="step-description">Create an account and connect Metamask wallet</p>
+            </div>
+            <div class="step-card">
+              <span class="step-number">2</span>
+              <i class="fas fa-cloud-upload-alt step-icon"></i>
+              <h3 class="step-title">Upload Your Memories</h3>
+              <p class="step-description">Add photos, videos or text messages to your capsule</p>
+            </div>
+            <div class="step-card">
+              <span class="step-number">3</span>
+              <i class="fas fa-calendar-alt step-icon"></i>
+              <h3 class="step-title">Set Unlock Conditions</h3>
+              <p class="step-description">Set the conditions for when the capsule should be opened</p>
+            </div>
+            <div class="step-card">
+              <span class="step-number">4</span>
+              <i class="fas fa-tasks step-icon"></i>
+              <h3 class="step-title">Monitor and Manage</h3>
+              <p class="step-description">You can view all your active capsules and check the statuses</p>
+            </div>
+            <div class="step-card">
+              <span class="step-number">5</span>
+              <i class="fas fa-unlock-alt step-icon"></i>
+              <h3 class="step-title">Open and Reveal</h3>
+              <p class="step-description">
+                When the conditions for opening a capsule are met, you'll receive a notification
+              </p>
+            </div>
+            <div class="step-card">
+              <span class="step-number">6</span>
+              <i class="fas fa-globe step-icon"></i>
+              <h3 class="step-title">Explore and Discover</h3>
+              <p class="step-description">Browse public capsules shared by others</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-capsules">
+          <div class="mx-auto max-w-3xl flex flex-col gap-2 px-4">
+            <h1 class="section-title uppercase capsules-title mb-8">Capsules</h1>
+            <div class="capsule-item flex items-start">
+              <div class="capsule-icon p-4 rounded-full">
+                <i class="fas fa-clock text-3xl"></i>
+              </div>
+              <div class="ml-6">
+                <h3 class="text-xl font-semibold">Time-based</h3>
+                <p class="mt-1">Opens on a specific date, preserving memories for the future.</p>
+              </div>
+            </div>
+
+            <div class="capsule-item flex items-start">
+              <div class="capsule-icon p-4 rounded-full">
+                <i class="fas fa-flag-checkered text-3xl"></i>
+              </div>
+              <div class="ml-6">
+                <h3 class="text-xl font-semibold">Conditional</h3>
+                <p class="mt-1">Unlocks upon meeting a specific condition, ideal for life milestones.</p>
+              </div>
+            </div>
+
+            <div class="capsule-item flex items-start">
+              <div class="capsule-icon p-4 rounded-full">
+                <i class="fas fa-infinity text-3xl"></i>
+              </div>
+              <div class="ml-6">
+                <h3 class="text-xl font-semibold">Inheritable</h3>
+                <p class="mt-1">Part of a digital will, passing cherished memories as a legacy.</p>
+              </div>
+            </div>
+
+            <div class="capsule-item flex items-start">
+              <div class="capsule-icon p-4 rounded-full">
+                <i class="fas fa-users text-3xl"></i>
+              </div>
+              <div class="ml-6">
+                <h3 class="text-xl font-semibold">Group-based</h3>
+                <p class="mt-1">Accessible to specific groups, perfect for shared memories.</p>
+              </div>
+            </div>
+
+            <div class="capsule-item flex items-start">
+              <div class="capsule-icon p-4 rounded-full">
+                <i class="fas fa-bottle-water text-3xl"></i>
+              </div>
+              <div class="ml-6">
+                <h3 class="text-xl font-semibold">Message in a Bottle</h3>
+                <p class="mt-1">
+                  A public capsule for random people in the future, like a digital time capsule.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-contact">
+          <div class="container mx-auto text-center">
+            <h1 class="section-title uppercase mb-8">Contact</h1>
+            <div class="contact-section flex flex-col md:flex-row gap-10 p-5">
+              <div class="contact-left w-full md:w-1/2 flex flex-col items-center justify-center p-5">
+                <h2 class="text-3xl font-semibold mb-6 text-center">Let's Talk About Your Problem</h2>
+                <div class="social-icons flex justify-center gap-3 mb-4 text-2xl">
+                  <a href="#"><i class="fab fa-github"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <p class="text-center text-lg">
+                  Email:
+                  <a href="mailto:acwiertniak95@gmail.com">acwiertniak95&#64;gmail.com</a>
+                </p>
+              </div>
+
+              <div class="contact-right w-full md:w-1/2 flex flex-col items-center justify-center p-5">
+                <form class="flex flex-col gap-5 w-full max-w-md">
+                  <input type="text" id="name" name="name" placeholder="First Name..." required />
+                  <input type="email" id="email" name="email" placeholder="Email address..." required />
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    placeholder="Your message..."
+                    required
+                  ></textarea>
+                  <button class="contact-button w-40 self-center" type="submit">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="flex justify-between">
+        <div></div>
+        <span class="text-lg font-semibold self-center">Copyright &copy; 2024</span>
+        <button class="top-button self-center mr-2"><i class="fa fa-arrow-up"></i></button>
+      </footer>
+    </div>
+  `,
+  standalone: true,
+  styleUrls: ["home.component.scss"],
+})
+export class HomeComponent {
+  isMenuHidden: boolean = true;
+
+  toggleMenu(): void {
+    this.isMenuHidden = !this.isMenuHidden;
+  }
+}

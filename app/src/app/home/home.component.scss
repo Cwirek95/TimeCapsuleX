@@ -1,0 +1,15 @@
+@use "../shared/styles/common/variables";
+@use "../shared/styles/common/global";
+@use "../shared/styles/common/buttons";
+@use "../shared/styles/common/forms";
+@use "../shared/styles/common/layouts";
+@use "../shared/styles/common/effects";
+@use "../shared/styles/sections/header";
+@use "../shared/styles/sections/footer";
+@use "../shared/styles/sections/how-it-works";
+@use "../shared/styles/sections/capsules";
+@use "../shared/styles/sections/contact";
+
+.main-content {
+  background-color: variables.$main-color;
+}

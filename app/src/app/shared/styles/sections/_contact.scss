@@ -1,0 +1,44 @@
+@use "../common/variables" as *;
+@use "../common/forms" as *;
+@use "../common/buttons" as *;
+
+.section-contact {
+  padding: 40px;
+  background-color: $main-color;
+  background-image: radial-gradient(circle, $highlight-color 20%, $main-color 70%);
+  background-size: cover;
+
+  .contact-left {
+    text-align: center;
+    color: $second-color;
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .social-icons a {
+      color: $second-color;
+      font-size: 2.5rem;
+      margin: 0 10px;
+      transition: transform 0.4s ease;
+
+      &:hover {
+        transform: scale(1.3);
+      }
+    }
+  }
+
+  .contact-right {
+    form {
+      input,
+      textarea {
+        @extend .input;
+      }
+
+      .contact-button {
+        @extend .button;
+      }
+    }
+  }
+}

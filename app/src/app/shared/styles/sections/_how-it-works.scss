@@ -1,0 +1,62 @@
+@use "../common/variables" as *;
+
+.section-how-it-works {
+  background-color: $main-color;
+  background-image: radial-gradient(circle, $highlight-color 20%, $main-color 70%);
+  background-size: cover;
+  padding: 40px;
+
+  .step-card {
+    position: relative;
+    background-color: $card-color;
+    color: $second-color;
+    border-radius: $radius-medium;
+    padding: 20px;
+    text-align: center;
+    box-shadow: $button-shadow;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: $button-shadow-hover;
+    }
+
+    .step-number {
+      position: absolute;
+      top: -15px;
+      left: 5%;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 50px;
+      background-color: $second-color;
+      color: $main-color;
+      font-size: 1.5rem;
+      font-weight: bold;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .step-icon {
+      color: $third-color;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .step-title {
+      font-weight: bold;
+      font-size: 1.25rem;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+    }
+
+    .step-description {
+      color: $second-color;
+      font-size: 1rem;
+    }
+  }
+}
