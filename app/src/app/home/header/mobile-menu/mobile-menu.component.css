@@ -1,0 +1,86 @@
+/* Core Colors */
+/* Special Colors */
+/* Shadows */
+/* Border Radius */
+.button, .back-button, .check-it-button, .join-button-mobile, .top-button, .contact-button, .join-button {
+  font-weight: 600;
+  border-radius: 8px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+}
+.button:hover, .back-button:hover, .check-it-button:hover, .join-button-mobile:hover, .top-button:hover, .contact-button:hover, .join-button:hover {
+  transform: scale(1.05);
+  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.25);
+  opacity: 0.9;
+}
+
+/* Button Variants */
+.join-button {
+  background-color: #151924;
+  color: #F9E6BE;
+}
+
+.contact-button {
+  padding: 10px 30px;
+  background-color: #151924;
+  color: #F9E6BE;
+}
+
+.top-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #151924;
+  color: #F9E6BE;
+}
+
+.join-button-mobile {
+  background-color: white;
+  color: #151924;
+  padding: 4px 30px;
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+  box-shadow: none;
+}
+.join-button-mobile:hover {
+  background-color: #F9E6BE;
+}
+
+.check-it-button {
+  background-color: #151924;
+  color: #F9E6BE;
+  font-weight: 600;
+  padding: 10px 30px;
+}
+
+.back-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #F9E6BE;
+  color: #151924;
+}
+.back-button:hover {
+  transform: scale(1.05);
+}
+
+.mobile-menu {
+  background-color: #151924;
+}
+
+.mobile-header {
+  background-color: #151924;
+}
+
+.nav-link {
+  color: #F9E6BE;
+  padding: 6px 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: color 0.3s ease, background-color 0.5s ease;
+}
+.nav-link:hover {
+  color: #151924;
+  background-color: #F9E6BE;
+}
+
+/*# sourceMappingURL=mobile-menu.component.css.map */

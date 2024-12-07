@@ -158,59 +158,6 @@ body {
     transform: translateY(0);
   }
 }
-.main-header {
-  background-color: #F9E6BE;
-  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.3) 20%, #F9E6BE 70%);
-  background-size: cover;
-}
-
-/* Header logo */
-.svg-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-}
-
-.mobile-header {
-  background-color: #151924;
-}
-
-.header-title {
-  color: #F9E6BE;
-}
-
-.header-title-x {
-  color: #53A7C1;
-}
-
-.mobile-menu {
-  background-color: #151924;
-}
-
-/* Header Nav Links */
-.nav-link {
-  color: #F9E6BE;
-  padding: 6px 16px;
-  font-weight: 600;
-  border-radius: 8px;
-  transition: color 0.3s ease, background-color 0.5s ease;
-}
-.nav-link:hover {
-  color: #151924;
-  background-color: #F9E6BE;
-}
-
-/* Transparent Card for Header */
-.transparent-card {
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 15px;
-  padding: 30px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-  backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
 footer {
   background-color: #F9E6BE;
   color: #151924;
@@ -334,6 +281,15 @@ footer .top-button {
 }
 .main-content {
   background-color: #F9E6BE;
+}
+
+.transparent-card {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 /*# sourceMappingURL=home.component.css.map */
