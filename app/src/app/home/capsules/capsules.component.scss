@@ -1,4 +1,5 @@
-@use '../common/variables' as *;
+@use '../../shared/styles/common/global' as *;
+@use '../../shared/styles/common/variables' as *;
 
 .section-capsules {
   background-color: $second-color;

@@ -1,0 +1,60 @@
+/* Core Colors */
+/* Special Colors */
+/* Shadows */
+/* Border Radius */
+/* Basic Reset */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica", sans-serif;
+  background-color: #F9E6BE;
+  color: #151924;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, #F9E6BE 70%);
+  background-size: cover;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: #151924;
+}
+
+.section-capsules {
+  background-color: #151924;
+  padding: 3rem 0;
+}
+.section-capsules .capsules-title {
+  color: #F9E6BE;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.section-capsules .capsule-item {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #53A7C1;
+}
+.section-capsules .capsule-item .capsule-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: #F9E6BE;
+  color: #151924;
+  font-size: 1.5rem;
+}
+.section-capsules .capsule-item h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #F9E6BE;
+}
+.section-capsules .capsule-item p {
+  color: #53A7C1;
+}
+
+/*# sourceMappingURL=capsules.component.css.map */
