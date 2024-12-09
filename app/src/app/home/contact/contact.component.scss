@@ -1,6 +1,5 @@
-@use "../common/variables" as *;
-@use "../common/forms" as *;
-@use "../common/buttons" as *;
+@use "../../shared/styles/common/variables" as *;
+@use "../../shared/styles/common/global" as *;
 
 .section-contact {
   padding: 40px;
@@ -25,19 +24,6 @@
 
       &:hover {
         transform: scale(1.3);
-      }
-    }
-  }
-
-  .contact-right {
-    form {
-      input,
-      textarea {
-        @extend .input;
-      }
-
-      .contact-button {
-        @extend .button;
       }
     }
   }
