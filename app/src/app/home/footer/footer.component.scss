@@ -1,6 +1,7 @@
-@use "../common/variables" as *;
+@use "../../shared/styles/common/variables" as *;
+@use "../../shared/styles/common/buttons" as *;
 
-footer {
+.footer {
   background-color: $main-color;
   color: $second-color;
   text-align: center;

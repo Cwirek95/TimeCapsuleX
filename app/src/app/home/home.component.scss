@@ -1,10 +1,4 @@
 @use "../shared/styles/common/variables" as *;
-@use "../shared/styles/common/global";
-@use "../shared/styles/common/buttons";
-@use "../shared/styles/common/forms";
-@use "../shared/styles/common/layouts";
-@use "../shared/styles/common/effects";
-@use "../shared/styles/sections/footer";
 
 .main-content {
   background-color: $main-color;

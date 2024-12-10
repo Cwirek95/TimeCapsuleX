@@ -3,10 +3,11 @@ import { HeaderComponent } from "./header/header.component";
 import { HowItWorksComponent } from "./how-it-works/how-it-works.component";
 import { CapsulesComponent } from "./capsules/capsules.component";
 import { ContactComponent } from "./contact/contact.component";
+import { FooterComponent } from "./footer/footer.component";
 
 @Component({
   selector: "app-home",
-  imports: [HeaderComponent, HowItWorksComponent, CapsulesComponent, ContactComponent],
+  imports: [HeaderComponent, HowItWorksComponent, CapsulesComponent, ContactComponent, FooterComponent],
   template: `
     <div class="main-content">
       <app-home-header></app-home-header>
@@ -24,11 +25,7 @@ import { ContactComponent } from "./contact/contact.component";
         <app-home-contact></app-home-contact>
       </main>
 
-      <footer class="flex justify-between">
-        <div></div>
-        <span class="text-lg font-semibold self-center">Copyright &copy; 2024</span>
-        <button class="top-button self-center mr-2"><i class="fa fa-arrow-up"></i></button>
-      </footer>
+      <app-home-footer></app-home-footer>
     </div>
   `,
   standalone: true,

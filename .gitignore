@@ -11,7 +11,7 @@ npm-debug.log
 yarn-error.log
 
 # Angular cache i coverage
-/.angular/cache
+/app/.angular/cache
 /coverage
 
 # --- IDE: IntelliJ, WebStorm ---
