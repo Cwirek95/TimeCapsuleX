@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { MobileMenuComponent } from "./mobile-menu/mobile-menu.component";
+import { ScrollService } from "../../shared/scroll/scroll.service";
 
 @Component({
   selector: "app-home-header",
@@ -30,10 +31,10 @@ import { MobileMenuComponent } from "./mobile-menu/mobile-menu.component";
       >
         <div class="flex gap-2 xl:gap-20 lg:gap-10 items-center">
           <nav class="flex xl:space-x-4 lg:space-x-2">
-            <a href="#" class="nav-link">Home</a>
-            <a href="#" class="nav-link">How It Works</a>
-            <a href="#" class="nav-link">Capsules</a>
-            <a href="#" class="nav-link">Contact</a>
+            <a href="#" class="nav-link" (click)="navigateToTop()">Home</a>
+            <a href="#" class="nav-link" (click)="navigateToSection('howItWorks')">How It Works</a>
+            <a href="#" class="nav-link" (click)="navigateToSection('capsules')">Capsules</a>
+            <a href="#" class="nav-link" (click)="navigateToSection('contact')">Contact</a>
           </nav>
           <button class="join-button mr-2 py-[10px] xl:px-[40px] md:px-[10px]">Join Now!</button>
         </div>
@@ -51,5 +52,16 @@ import { MobileMenuComponent } from "./mobile-menu/mobile-menu.component";
   `,
   standalone: true,
   styleUrls: ["header.component.scss"],
+  providers: [ScrollService],
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+  constructor(private scrollService: ScrollService) {}
+
+  navigateToTop(): void {
+    this.scrollService.scrollToTop();
+  }
+
+  navigateToSection(sectionId: string): void {
+    this.scrollService.scrollTo(sectionId);
+  }
+}

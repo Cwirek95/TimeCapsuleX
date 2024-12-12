@@ -18,11 +18,11 @@ import { FooterComponent } from "./footer/footer.component";
           <button class="check-it-button mt-8">Let's check it out</button>
         </div>
 
-        <app-home-how-it-works></app-home-how-it-works>
+        <app-home-how-it-works id="howItWorks"></app-home-how-it-works>
 
-        <app-home-capsules></app-home-capsules>
+        <app-home-capsules id="capsules"></app-home-capsules>
 
-        <app-home-contact></app-home-contact>
+        <app-home-contact id="contact"></app-home-contact>
       </main>
 
       <app-home-footer></app-home-footer>

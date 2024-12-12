@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { NgOptimizedImage } from "@angular/common";
+import { ScrollService } from "../../../shared/scroll/scroll.service";
 
 @Component({
   selector: "app-home-mobile-menu",
@@ -21,19 +22,34 @@ import { NgOptimizedImage } from "@angular/common";
         <button class="join-button-mobile">Join Now!</button>
       </div>
       <hr />
-      <a href="#" class="nav-link text-white block text-center py-2">Home</a>
-      <a href="#" class="nav-link text-white block text-center py-2">How It Works</a>
-      <a href="#" class="nav-link text-white block text-center py-2">Capsules</a>
-      <a href="#" class="nav-link text-white block text-center py-2">Contact</a>
+      <a href="#" class="nav-link text-white block text-center py-2" (click)="navigateToTop()">Home</a>
+      <a href="#" class="nav-link text-white block text-center py-2" (click)="navigateToSection('howItWorks')"
+        >How It Works</a
+      >
+      <a href="#" class="nav-link text-white block text-center py-2" (click)="navigateToSection('capsules')"
+        >Capsules</a
+      >
+      <a href="#" class="nav-link text-white block text-center py-2" (click)="navigateToSection('contact')"
+        >Contact</a
+      >
     </nav>
   `,
   standalone: true,
   styleUrls: ["mobile-menu.component.scss"],
 })
 export class MobileMenuComponent {
+  constructor(private scrollService: ScrollService) {}
   isMenuHidden: boolean = true;
 
   toggleMenu(): void {
     this.isMenuHidden = !this.isMenuHidden;
+  }
+
+  navigateToTop(): void {
+    this.scrollService.scrollToTop();
+  }
+
+  navigateToSection(sectionId: string): void {
+    this.scrollService.scrollTo(sectionId);
   }
 }
