@@ -1,6 +1,6 @@
-@use 'variables' as *;
+@use "variables" as *;
+@use "global" as *;
 
-/* Inputs and Textareas */
 .input {
   width: 100%;
   padding: 12px;
@@ -25,9 +25,13 @@
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     transform: translateY(-2px);
   }
+
+  &.input-error {
+    border-color: $error-color;
+    animation: shake 0.9s ease;
+  }
 }
 
-/* Form Layout */
 .form-section {
   background-color: $main-color;
   padding: 40px;

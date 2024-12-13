@@ -17,13 +17,13 @@
 /* Button Variants */
 .join-button {
   background-color: #151924;
-  color: #F9E6BE;
+  color: #f9e6be;
 }
 
 .contact-button {
   padding: 10px 30px;
   background-color: #151924;
-  color: #F9E6BE;
+  color: #f9e6be;
 }
 
 .top-button {
@@ -31,7 +31,7 @@
   height: 40px;
   border-radius: 50%;
   background-color: #151924;
-  color: #F9E6BE;
+  color: #f9e6be;
 }
 
 .join-button-mobile {
@@ -42,12 +42,12 @@
   box-shadow: none;
 }
 .join-button-mobile:hover {
-  background-color: #F9E6BE;
+  background-color: #f9e6be;
 }
 
 .check-it-button {
   background-color: #151924;
-  color: #F9E6BE;
+  color: #f9e6be;
   font-weight: 600;
   padding: 10px 30px;
 }
@@ -56,7 +56,7 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #F9E6BE;
+  background-color: #f9e6be;
   color: #151924;
 }
 .back-button:hover {
@@ -64,8 +64,8 @@
 }
 
 .main-header {
-  background-color: #F9E6BE;
-  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.3) 20%, #F9E6BE 70%);
+  background-color: #f9e6be;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.3) 20%, #f9e6be 70%);
   background-size: cover;
 }
 
@@ -77,11 +77,11 @@
 }
 
 .header-title {
-  color: #F9E6BE;
+  color: #f9e6be;
 }
 
 .header-title-x {
-  color: #53A7C1;
+  color: #53a7c1;
 }
 
 .nav-link {
@@ -92,7 +92,7 @@
   transition: color 0.3s ease, background-color 0.5s ease;
 }
 .nav-link:hover {
-  color: #F9E6BE;
+  color: #f9e6be;
   background-color: #151924;
 }
 

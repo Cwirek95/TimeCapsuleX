@@ -1,10 +1,10 @@
-@use 'variables' as *;
+@use "variables" as *;
 
 /* Basic Reset */
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Helvetica', sans-serif;
+  font-family: "Helvetica", sans-serif;
   background-color: $main-color;
   color: $second-color;
   background-image: radial-gradient(circle, $highlight-color 0%, $main-color 70%);
@@ -18,4 +18,42 @@ body {
   text-transform: uppercase;
   margin-bottom: 20px;
   color: $second-color;
+}
+
+.text-error {
+  color: $error-color;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20%,
+  60% {
+    transform: translateX(-10px);
+  }
+  40%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
+.spinner {
+  width: 1rem;
+  height: 1rem;
+  border: 3px solid $third-color;
+  border-top: 3px solid $main-color;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

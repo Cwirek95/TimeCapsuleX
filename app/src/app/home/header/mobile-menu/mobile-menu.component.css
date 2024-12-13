@@ -17,13 +17,13 @@
 /* Button Variants */
 .join-button {
   background-color: #151924;
-  color: #F9E6BE;
+  color: #f9e6be;
 }
 
 .contact-button {
   padding: 10px 30px;
   background-color: #151924;
-  color: #F9E6BE;
+  color: #f9e6be;
 }
 
 .top-button {
@@ -31,7 +31,7 @@
   height: 40px;
   border-radius: 50%;
   background-color: #151924;
-  color: #F9E6BE;
+  color: #f9e6be;
 }
 
 .join-button-mobile {
@@ -42,12 +42,12 @@
   box-shadow: none;
 }
 .join-button-mobile:hover {
-  background-color: #F9E6BE;
+  background-color: #f9e6be;
 }
 
 .check-it-button {
   background-color: #151924;
-  color: #F9E6BE;
+  color: #f9e6be;
   font-weight: 600;
   padding: 10px 30px;
 }
@@ -56,7 +56,7 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #F9E6BE;
+  background-color: #f9e6be;
   color: #151924;
 }
 .back-button:hover {
@@ -72,7 +72,7 @@
 }
 
 .nav-link {
-  color: #F9E6BE;
+  color: #f9e6be;
   padding: 6px 16px;
   font-weight: 600;
   border-radius: 8px;
@@ -80,7 +80,7 @@
 }
 .nav-link:hover {
   color: #151924;
-  background-color: #F9E6BE;
+  background-color: #f9e6be;
 }
 
 /*# sourceMappingURL=mobile-menu.component.css.map */

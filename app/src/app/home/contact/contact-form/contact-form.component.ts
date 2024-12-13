@@ -1,94 +1,111 @@
-import { Component, inject } from "@angular/core";
+import { Component } from "@angular/core";
 import { ContactEmailService } from "./ContactEmailService";
-import { ContactEmailStatus } from "./ContactEmailStatus";
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from "@angular/forms";
+import { NgClass, NgStyle } from "@angular/common";
+import { ContactEmailStatus } from "./ContactEmailStatus";
 
 @Component({
   selector: "app-home-contact-form",
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, NgStyle, NgClass],
   template: `
     <div class="contact-right w-full flex flex-col items-center justify-center p-5">
       <form
         [formGroup]="contactForm"
         (ngSubmit)="onSubmit($event)"
-        class="flex flex-col gap-5 w-full max-w-full md:max-w-3xl"
+        class="flex flex-col gap-3 w-full max-w-full md:max-w-3xl"
       >
-        <!-- Name field -->
-        <input
-          formControlName="name"
-          type="text"
-          id="name"
-          name="name"
-          placeholder="First Name..."
-          class="input-field"
-        />
-        <!-- Name validation error message -->
-        @if (contactForm.get("name")?.invalid && contactForm.get("name")?.touched) {
-          <div class="validation-message error">Name is required.</div>
-        }
+        <div>
+          <input
+            formControlName="name"
+            [ngClass]="{ 'input-error': submitted && contactForm.get('name')?.invalid }"
+            type="text"
+            id="name"
+            name="name"
+            placeholder="First Name..."
+          />
+          <p
+            class="mt-1 text-sm text-error"
+            [ngStyle]="{ opacity: submitted && contactForm.get('name')?.invalid ? 1 : 0 }"
+          >
+            The field is required
+          </p>
+        </div>
 
-        <!-- Email field -->
-        <input
-          formControlName="email"
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Email address..."
-          class="input-field"
-        />
-        <!-- Email validation error message -->
-        @if (contactForm.get("email")?.invalid && contactForm.get("email")?.touched) {
-          <div class="validation-message error">Please enter a valid email.</div>
-        }
+        <div>
+          <input
+            formControlName="email"
+            [ngClass]="{ 'input-error': submitted && contactForm.get('email')?.invalid }"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email address..."
+          />
+          <p
+            class="mt-1 text-sm text-error"
+            [ngStyle]="{ opacity: submitted && contactForm.get('email')?.invalid ? 1 : 0 }"
+          >
+            Please enter a valid email address
+          </p>
+        </div>
 
-        <!-- Message field -->
-        <textarea
-          formControlName="message"
-          id="message"
-          name="message"
-          rows="5"
-          placeholder="Your message..."
-          class="input-field"
-        ></textarea>
-        <!-- Message validation error message -->
-        @if (contactForm.get("message")?.invalid && contactForm.get("message")?.touched) {
-          <div class="validation-message error">Message is required.</div>
-        }
+        <div>
+          <textarea
+            formControlName="message"
+            [ngClass]="{ 'input-error': submitted && contactForm.get('message')?.invalid }"
+            id="message"
+            name="message"
+            rows="5"
+            placeholder="Your message..."
+          ></textarea>
+          <p
+            class="mt-1 text-sm text-error"
+            [ngStyle]="{ opacity: submitted && contactForm.get('message')?.invalid ? 1 : 0 }"
+          >
+            The message cannot be empty
+          </p>
+        </div>
 
         <!-- Submit button -->
-        <button
-          class="contact-button w-40 self-center"
-          type="submit"
-          [disabled]="contactForm.invalid || emailService.isSending()"
-        >
-          Submit
-        </button>
+        <div class="flex flex-col gap-3 mt-1">
+          <button class="contact-button w-40 self-center" [disabled]="isLoading" type="submit">
+            @if (isLoading) {
+              <div class="spinner"></div>
+            } @else {
+              Submit
+            }
+          </button>
+          <div
+            class="self-center rounded-lg py-1"
+            [ngClass]="{
+              'error-alert': emailService.sendResult() === ContactEmailStatus.Error,
+              'success-alert': emailService.sendResult() === ContactEmailStatus.Success,
+            }"
+            [ngStyle]="{
+              opacity: emailService.sendResult() !== ContactEmailStatus.None ? 1 : 0,
+            }"
+            role="alert"
+          >
+            <span [ngStyle]="{ opacity: emailService.sendResult() !== ContactEmailStatus.None ? 1 : 0 }">{{
+              submitResultMessage
+            }}</span>
+          </div>
+        </div>
       </form>
-
-      <!-- Success or error messages using @if -->
-      @if (emailService.sendResult() === ContactEmailStatus.Success) {
-        <div class="p-4 mt-4 text-sm text-green-800 rounded-lg bg-green-100 opacity-60" role="alert">
-          <span class="font-medium">Your message has been sent successfully!</span>
-        </div>
-      }
-
-      @if (emailService.sendResult() === ContactEmailStatus.Error) {
-        <div class="p-4 mt-4 text-sm text-red-800 rounded-lg bg-red-100 opacity-60" role="alert">
-          <span class="font-medium">Failed to send your message. Please try again.</span>
-        </div>
-      }
     </div>
   `,
   standalone: true,
   styleUrls: ["contact-form-component.scss"],
 })
 export class ContactFormComponent {
-  emailService = inject(ContactEmailService);
-
   contactForm: FormGroup;
   submitted = false;
+  isLoading = false;
+  submitResultMessage: string = "";
 
-  constructor(private fb: FormBuilder) {
+  constructor(
+    private fb: FormBuilder,
+    protected emailService: ContactEmailService,
+  ) {
     this.contactForm = this.fb.group({
       name: ["", Validators.required],
       email: ["", [Validators.required, Validators.email]],
@@ -101,21 +118,26 @@ export class ContactFormComponent {
     this.submitted = true;
 
     if (this.contactForm.valid) {
+      this.isLoading = true;
       const { name, email, message } = this.contactForm.value;
       this.emailService
         .sendEmail(name, email, message)
         .then(() => {
-          this.resetForm();
+          this.submitResultMessage = "The message was sent successfully!";
         })
         .catch((error) => {
-          console.error(error);
+          this.submitResultMessage = "An error occurred while sending the message";
+        })
+        .finally(() => {
+          this.submitted = false;
+          this.isLoading = false;
+          this.resetForm();
         });
     }
   }
 
   resetForm(): void {
     this.contactForm.reset();
-    this.submitted = false;
   }
 
   protected readonly ContactEmailStatus = ContactEmailStatus;

@@ -6,7 +6,7 @@ import { ContactEmailStatus } from "./ContactEmailStatus";
 })
 export class ContactEmailService {
   succeedPercentage: number = 0.8; // Temporary
-  delayMilliseconds: number = 100;
+  delayMilliseconds: number = 2000;
 
   isSending = signal(false);
   sendResult = signal<ContactEmailStatus>(ContactEmailStatus.None);
@@ -15,7 +15,6 @@ export class ContactEmailService {
     this.isSending.set(true);
     this.sendResult.set(ContactEmailStatus.None);
 
-    // Zwracamy Promise
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         const isSuccess = Math.random() > 1 - this.succeedPercentage;
@@ -26,7 +25,7 @@ export class ContactEmailService {
         if (isSuccess) {
           resolve();
         } else {
-          reject("Email sending failed");
+          reject();
         }
       }, this.delayMilliseconds);
     });

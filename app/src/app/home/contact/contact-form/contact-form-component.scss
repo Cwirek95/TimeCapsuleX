@@ -1,5 +1,6 @@
 @use "../../../shared/styles/common/forms" as *;
 @use "../../../shared/styles/common/buttons" as *;
+@use "../../../shared/styles/common/variables" as *;
 
 .contact-right {
   form {
@@ -11,27 +12,32 @@
     .contact-button {
       @extend .button;
       cursor: pointer;
+
+      &:disabled {
+        opacity: 0.9;
+        cursor: not-allowed;
+        transition: none;
+        transform: none;
+        box-shadow: none;
+      }
     }
   }
 }
 
-.validation-message {
-  font-size: 0.875rem;
-  padding: 5px;
-  margin-top: 5px;
-  width: 100%;
-  max-width: 400px;
-  border-radius: 4px;
+.error-alert {
+  background-color: rgba($error-color, 0.4);
+  color: rgba($error-color, 1);
+  border: 2px solid rgba($error-color, 0.6);
+  font-weight: 600;
+  width: 75%;
+  text-align: center;
 }
 
-.validation-message.error {
-  color: #d9534f;
-  border: 1px solid #d9534f;
-  background-color: rgba(217, 53, 79, 0.1);
-}
-
-.validation-message.success {
-  color: #5bc0de;
-  border: 1px solid #5bc0de;
-  background-color: rgba(91, 192, 222, 0.1);
+.success-alert {
+  background-color: rgba($success-color, 0.4);
+  color: rgba($success-color, 1);
+  border: 2px solid rgba($success-color, 0.6);
+  font-weight: 600;
+  width: 75%;
+  text-align: center;
 }
