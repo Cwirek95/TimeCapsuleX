@@ -1,5 +1,5 @@
 import { Injectable, signal } from "@angular/core";
-import { ContactEmailStatus } from "./ContactEmailStatus";
+import { ContactEmailStatus } from "./contact-email-status";
 
 @Injectable({
   providedIn: "root",

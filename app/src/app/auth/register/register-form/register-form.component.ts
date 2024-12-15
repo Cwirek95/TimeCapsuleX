@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from "@angula
 import { RegisterUserService } from "./register-user.service";
 import { RegisterUserStatus } from "./register-user-status";
 import { NgClass, NgStyle } from "@angular/common";
-import { ContactEmailStatus } from "../../../home/contact/contact-form/ContactEmailStatus";
+import { ContactEmailStatus } from "../../../home/contact/contact-form/contact-email-status";
 
 @Component({
   selector: "app-auth-register-form",

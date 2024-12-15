@@ -1,8 +1,8 @@
 import { Component } from "@angular/core";
-import { ContactEmailService } from "./ContactEmailService";
+import { ContactEmailService } from "./contact-email.service";
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from "@angular/forms";
 import { NgClass, NgStyle } from "@angular/common";
-import { ContactEmailStatus } from "./ContactEmailStatus";
+import { ContactEmailStatus } from "./contact-email-status";
 
 @Component({
   selector: "app-home-contact-form",
