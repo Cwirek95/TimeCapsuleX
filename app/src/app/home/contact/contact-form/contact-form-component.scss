@@ -1,6 +1,7 @@
 @use "../../../shared/styles/common/forms" as *;
 @use "../../../shared/styles/common/buttons" as *;
 @use "../../../shared/styles/common/variables" as *;
+@use "../../../shared/styles/common/global" as *;
 
 .contact-right {
   form {
@@ -22,22 +23,4 @@
       }
     }
   }
-}
-
-.error-alert {
-  background-color: rgba($error-color, 0.4);
-  color: rgba($error-color, 1);
-  border: 2px solid rgba($error-color, 0.6);
-  font-weight: 600;
-  width: 75%;
-  text-align: center;
-}
-
-.success-alert {
-  background-color: rgba($success-color, 0.4);
-  color: rgba($success-color, 1);
-  border: 2px solid rgba($success-color, 0.6);
-  font-weight: 600;
-  width: 75%;
-  text-align: center;
 }

@@ -55,6 +55,24 @@ body {
     transform: rotate(360deg);
   }
 }
+.error-alert {
+  background-color: rgba(230, 57, 70, 0.4);
+  color: #e63946;
+  border: 2px solid rgba(230, 57, 70, 0.6);
+  font-weight: 600;
+  width: 75%;
+  text-align: center;
+}
+
+.success-alert {
+  background-color: rgba(106, 153, 78, 0.4);
+  color: #6a994e;
+  border: 2px solid rgba(106, 153, 78, 0.6);
+  font-weight: 600;
+  width: 75%;
+  text-align: center;
+}
+
 .section-contact {
   padding: 40px;
   background-color: #f9e6be;

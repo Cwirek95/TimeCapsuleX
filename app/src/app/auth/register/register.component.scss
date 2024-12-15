@@ -1,0 +1,14 @@
+@use "../../shared/styles/common/variables" as *;
+@use "../../shared/styles/common/buttons";
+
+.main-content {
+  background-color: $main-color;
+  color: $second-color;
+  background-image: radial-gradient(circle, $highlight-color 0%, $main-color 70%);
+  background-size: cover;
+}
+
+.register-left-side {
+  background-color: $second-color;
+  color: $main-color;
+}
