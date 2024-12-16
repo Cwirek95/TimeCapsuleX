@@ -1,0 +1,25 @@
+@use "../../shared/styles/common/variables" as *;
+@use "../../shared/styles/common/buttons";
+
+.main-content {
+  background-color: $main-color;
+  color: $second-color;
+  background-image: radial-gradient(circle, $highlight-color 0%, $main-color 70%);
+  background-size: cover;
+}
+
+.login-left-side {
+  background-color: $second-color;
+  color: $main-color;
+}
+
+.social-icons a {
+  color: $second-color;
+  font-size: 2.5rem;
+  margin: 0 10px;
+  transition: transform 0.4s ease;
+
+  &:hover {
+    transform: scale(1.3);
+  }
+}

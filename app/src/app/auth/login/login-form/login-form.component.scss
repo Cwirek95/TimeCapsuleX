@@ -1,0 +1,24 @@
+@use "../../../shared/styles/common/variables" as *;
+@use "../../../shared/styles/common/buttons" as *;
+@use "../../../shared/styles/common/forms" as *;
+
+.login-section {
+  @extend .form-section;
+  margin-bottom: 20px;
+  background-image: radial-gradient(circle, $highlight-color 0%, $main-color 70%);
+  background-size: cover;
+
+  form {
+    input,
+    textarea {
+      @extend .input;
+    }
+  }
+
+  .login-button {
+    @extend .button;
+    background-color: $second-color;
+    color: $main-color;
+    padding: 10px 0;
+  }
+}

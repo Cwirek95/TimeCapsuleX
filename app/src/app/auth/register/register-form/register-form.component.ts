@@ -190,5 +190,4 @@ export class RegisterFormComponent {
   }
 
   protected readonly RegisterUserStatus = RegisterUserStatus;
-  protected readonly ContactEmailStatus = ContactEmailStatus;
 }
