@@ -1,10 +1,11 @@
 import { Component } from "@angular/core";
 import { NgOptimizedImage } from "@angular/common";
 import { ScrollService } from "../../../shared/scroll/scroll.service";
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: "app-home-mobile-menu",
-  imports: [NgOptimizedImage],
+  imports: [NgOptimizedImage, RouterLink],
   template: `
     <div class="mobile-header flex w-full justify-between items-center p-4 sm:hidden">
       <img ngSrc="/img/logo-mobile.png" alt="Logo" width="694" height="775" class="w-12 h-12" />
@@ -19,7 +20,7 @@ import { ScrollService } from "../../../shared/scroll/scroll.service";
       class="hidden mobile-menu flex-col text-white w-full sm:hidden absolute top-full left-0 z-10 p-4 space-y-2"
     >
       <div class="flex justify-center">
-        <button class="join-button-mobile">Join Now!</button>
+        <button routerLink="/login" class="join-button-mobile">Join Now!</button>
       </div>
       <hr />
       <a href="#" class="nav-link text-white block text-center py-2" (click)="navigateToTop()">Home</a>

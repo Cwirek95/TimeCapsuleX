@@ -2,6 +2,67 @@
 /* Special Colors */
 /* Shadows */
 /* Border Radius */
+.button, .back-button, .check-it-button, .join-button-mobile, .top-button, .contact-button, .join-button {
+  font-weight: 600;
+  border-radius: 8px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+}
+.button:hover, .back-button:hover, .check-it-button:hover, .join-button-mobile:hover, .top-button:hover, .contact-button:hover, .join-button:hover {
+  transform: scale(1.05);
+  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.25);
+  opacity: 0.9;
+}
+
+/* Button Variants */
+.join-button {
+  background-color: #151924;
+  color: #f9e6be;
+}
+
+.contact-button {
+  padding: 10px 30px;
+  background-color: #151924;
+  color: #f9e6be;
+}
+
+.top-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #151924;
+  color: #f9e6be;
+}
+
+.join-button-mobile {
+  background-color: white;
+  color: #151924;
+  padding: 4px 30px;
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+  box-shadow: none;
+}
+.join-button-mobile:hover {
+  background-color: #f9e6be;
+}
+
+.check-it-button {
+  background-color: #151924;
+  color: #f9e6be;
+  font-weight: 600;
+  padding: 10px 30px;
+}
+
+.back-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f9e6be;
+  color: #151924;
+}
+.back-button:hover {
+  transform: scale(1.05);
+}
+
 .main-content {
   background-color: #f9e6be;
 }

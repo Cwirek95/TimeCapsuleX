@@ -1,10 +1,11 @@
 import { Component } from "@angular/core";
 import { MobileMenuComponent } from "./mobile-menu/mobile-menu.component";
 import { ScrollService } from "../../shared/scroll/scroll.service";
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: "app-home-header",
-  imports: [MobileMenuComponent],
+  imports: [MobileMenuComponent, RouterLink],
   template: `
     <header class="main-header relative xl:h-[460px] md:h-[260px]">
       <app-home-mobile-menu></app-home-mobile-menu>
@@ -36,7 +37,9 @@ import { ScrollService } from "../../shared/scroll/scroll.service";
             <a href="#" class="nav-link" (click)="navigateToSection('capsules')">Capsules</a>
             <a href="#" class="nav-link" (click)="navigateToSection('contact')">Contact</a>
           </nav>
-          <button class="join-button mr-2 py-[10px] xl:px-[40px] md:px-[10px]">Join Now!</button>
+          <button routerLink="/login" class="join-button mr-2 py-[10px] xl:px-[40px] md:px-[10px]">
+            Join Now!
+          </button>
         </div>
 
         <div class="xl:ml-96 text-left mt-4 xl:mt-16 self-center ml-96 mr-2 fade-in transparent-card">
@@ -45,7 +48,7 @@ import { ScrollService } from "../../shared/scroll/scroll.service";
             Digital capsules can be set to unlock at chosen moments, shared with loved ones, or stored as part
             of a lasting digital legacy. Stories and memories, safely kept – now and forever
           </p>
-          <button class="check-it-button mt-8">Let's check it out</button>
+          <button routerLink="/register" class="check-it-button mt-8">Let's check it out</button>
         </div>
       </div>
     </header>

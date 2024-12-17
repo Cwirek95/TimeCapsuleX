@@ -41,7 +41,7 @@ import { RouterLink } from "@angular/router";
             />
           </svg>
           <p class="mb-4 mt-5 md:mt-40 text-lg md:text-2xl font-semibold">
-            Already have an account? <a href="#" class="text-third-color underline">Log in</a>
+            Already have an account? <a routerLink="/login" class="text-third-color underline">Log in</a>
           </p>
           <footer class="mt-auto text-center text-lg font-semibold">Copyright &copy; 2024</footer>
         </div>
