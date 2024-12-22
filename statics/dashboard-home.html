@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeCapsuleX - Dashboard</title>
+    <link rel="stylesheet" href="styles/pages/dashboard-home-styles.css">
+</head>
+<body>
+<div class="main-content">
+    <div class="flex flex-col md:flex-row h-screen">
+        <!-- Sidebar -->
+        <aside class="sidebar w-full md:w-80 flex flex-col items-center">
+            <div class="flex mt-6 mb-12">
+                <img src="img/logo-mobile-text.png" alt="TimeCapsuleX" class="w-48">
+            </div>
+            <nav class="mb-8">
+                <ul class="flex flex-col">
+                    <li class="nav-active">
+                        <a href="#" class="flex items-center gap-2 p-2">
+                            <i class="fas fa-chart-line"></i>Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center gap-2 p-2">
+                            <i class="fas fa-clock"></i>Time-based Capsules
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center gap-2 p-2">
+                            <i class="fas fa-flag-checkered"></i>Conditional Capsules
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center gap-2 p-2">
+                            <i class="fas fa-infinity"></i>Inheritable Capsules
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center gap-2 p-2">
+                            <i class="fas fa-users"></i>Group-based Capsules
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center gap-2 p-2 rounded">
+                            <i class="fas fa-bottle-water"></i>Message in a Bottle Capsules
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-grow">
+            <!-- Header -->
+            <header class="dashboard-header flex flex-col md:flex-row md:justify-between">
+                <div class="hidden md:flex items-center ml-5 gap-4">
+                    <i class="fa fa-arrow-right"></i>
+                    <span class="uppercase font-semibold">Dashboard</span>
+                </div>
+                <div class="md:flex mr-5 gap-3 items-center">
+                    <button type="button" class="mr-4 uppercase wallet-button"><i class="fa-solid fa-wallet mr-1"></i> My Wallet</button>
+                    <img
+                            src="https://via.placeholder.com/40"
+                            alt="User Avatar"
+                            class="rounded-full"
+                    />
+                    <div class="flex flex-col mr-6 mt-1 header-user">
+                        <span class="text-md font-semibold">Cwirek95</span>
+                        <a href="#" class="underline hover:opacity-80">My profile</a>
+                    </div>
+                    <div class="mr-2 hover:opacity-80 cursor-pointer">
+                        <i class="fa fa-sign-out logout-icon"></i>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Main Section -->
+            <section class="mt-6">
+                <div class="stats-cards flex flex-col sm:flex-row sm:justify-around mb-6">
+                    <div class="stats-card">
+                        <h3>Time-Based Capsules</h3>
+                        <p>23</p>
+                    </div>
+                    <div class="stats-card">
+                        <h3>Conditional Capsules</h3>
+                        <p>8</p>
+                    </div>
+                    <div class="stats-card">
+                        <h3>Inheritable Capsules</h3>
+                        <p>0</p>
+                    </div>
+                    <div class="stats-card">
+                        <h3>Group-Based Capsules</h3>
+                        <p>11</p>
+                    </div>
+                    <div class="stats-card">
+                        <h3>Message In a Bottle Capsules</h3>
+                        <p>9</p>
+                    </div>
+                </div>
+
+                <!-- Table -->
+                <div class="table-container">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Title</th>
+                            <th>Status</th>
+                            <th>Role</th>
+                            <th>Edit</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>John Doe</td>
+                            <td>Software Engineer</td>
+                            <td class="status"><span class="active">Active</span></td>
+                            <td>Owner</td>
+                            <td><a href="#">Edit</a></td>
+                        </tr>
+                        <tr>
+                            <td>Jane Smith</td>
+                            <td>Product Manager</td>
+                            <td class="status"><span class="inactive">Inactive</span></td>
+                            <td>Admin</td>
+                            <td><a href="#">Edit</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+</div>
+</body>
+</html>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://kit.fontawesome.com/bd2d3af33f.js" crossorigin="anonymous"></script>
