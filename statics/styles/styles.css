@@ -81,6 +81,19 @@ body {
   transform: scale(1.05);
 }
 
+.wallet-button {
+  border: 2px solid #151924;
+  color: #151924;
+  font-weight: 600;
+  padding: 2px 15px;
+  border-radius: 8px;
+  transition: 0.4s ease;
+}
+.wallet-button:hover {
+  background-color: #151924;
+  color: #F9E6BE;
+}
+
 /* Inputs and Textareas */
 .input, .section-contact .contact-right form input,
 .section-contact .contact-right form textarea {

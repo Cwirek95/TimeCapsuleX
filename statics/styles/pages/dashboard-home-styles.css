@@ -1,36 +1,111 @@
-@charset "UTF-8";
 /* Core Colors */
 /* Special Colors */
 /* Shadows */
 /* Border Radius */
+.button, .back-button, .check-it-button, .join-button-mobile, .top-button, .contact-button, .join-button {
+  font-weight: 600;
+  border-radius: 8px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+}
+.button:hover, .back-button:hover, .check-it-button:hover, .join-button-mobile:hover, .top-button:hover, .contact-button:hover, .join-button:hover {
+  transform: scale(1.05);
+  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.25);
+  opacity: 0.9;
+}
+
+/* Button Variants */
+.join-button {
+  background-color: #151924;
+  color: #F9E6BE;
+}
+
+.contact-button {
+  padding: 10px 30px;
+  background-color: #151924;
+  color: #F9E6BE;
+}
+
+.top-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #151924;
+  color: #F9E6BE;
+}
+
+.join-button-mobile {
+  background-color: white;
+  color: #151924;
+  padding: 4px 30px;
+}
+.join-button-mobile:hover {
+  background-color: #F9E6BE;
+}
+
+.check-it-button {
+  background-color: #151924;
+  color: #F9E6BE;
+  font-weight: 600;
+  padding: 10px 30px;
+}
+
+.back-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #F9E6BE;
+  color: #151924;
+}
+.back-button:hover {
+  transform: scale(1.05);
+}
+
+.wallet-button {
+  border: 2px solid #151924;
+  color: #151924;
+  font-weight: 600;
+  padding: 2px 15px;
+  border-radius: 8px;
+  transition: 0.4s ease;
+}
+.wallet-button:hover {
+  background-color: #151924;
+  color: #F9E6BE;
+}
+
+body {
+  background-color: #F9E6BE;
+}
+
 .main-content {
   background-color: #F9E6BE;
 }
 
-aside {
+.sidebar {
   background-color: #151924;
   color: white;
 }
-aside nav ul li {
+.sidebar nav ul li {
   display: flex;
   align-items: center;
   padding: 1rem;
   transition: background-color 0.3s ease;
   opacity: 0.9;
 }
-aside nav ul li:hover {
+.sidebar nav ul li:hover {
   background-color: rgba(255, 255, 255, 0.3);
 }
-aside nav ul li.nav-active {
+.sidebar nav ul li.nav-active {
   color: #F9E6BE;
   border-left: 4px solid #F9E6BE;
 }
-aside nav ul li a {
+.sidebar nav ul li a {
   text-transform: uppercase;
   font-weight: 600;
   font-size: 0.9em;
 }
-aside nav ul li i {
+.sidebar nav ul li i {
   font-size: 1.1rem;
   min-width: 40px;
   text-align: center;
@@ -44,17 +119,6 @@ aside nav ul li i {
 .dashboard-header i {
   font-size: 1rem;
 }
-.dashboard-header .wallet-button {
-  border: 2px solid #151924;
-  color: #151924;
-  font-weight: 600;
-  padding: 2px 15px;
-  transition: 0.4s ease;
-}
-.dashboard-header .wallet-button:hover {
-  background-color: #151924;
-  color: #F9E6BE;
-}
 .dashboard-header .header-user {
   line-height: 1em;
 }
@@ -66,7 +130,6 @@ aside nav ul li i {
   transform: scale(1.1);
 }
 
-/* Stats card styles */
 section .stats-card {
   background-color: rgba(255, 255, 255, 0.2);
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
@@ -83,50 +146,11 @@ section .stats-card p {
   font-weight: bold;
 }
 
-/* Table styles */
-table {
-  width: 100%;
-  border-spacing: 0;
-  border-collapse: collapse;
-}
-table thead {
-  background-color: #FDF1D6;
-}
-table thead th {
-  padding: 0.5rem;
-  text-align: left;
-  font-size: 0.875rem;
-  color: #666; /* Możesz zdefiniować to jako zmienną */
-}
-table tbody tr:nth-child(odd) {
+.activities-card {
   background-color: rgba(255, 255, 255, 0.2);
-}
-table tbody tr:nth-child(even) {
-  background-color: rgba(255, 255, 255, 0.3);
-}
-table tbody tr td {
-  padding: 0.5rem;
-}
-table tbody tr .status span {
-  display: inline-block;
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
-  font-size: 0.75rem;
-}
-table tbody tr .status span.active {
-  background-color: rgba(72, 187, 120, 0.2); /* Zielony */
-  color: #48BB78;
-}
-table tbody tr .status span.inactive {
-  background-color: rgba(245, 101, 101, 0.2); /* Czerwony */
-  color: #F56565;
-}
-table tbody tr a {
-  color: #53A7C1;
-  text-decoration: underline;
-}
-table tbody tr a:hover {
-  text-decoration: none;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 1rem;
 }
 
 /*# sourceMappingURL=dashboard-home-styles.css.map */

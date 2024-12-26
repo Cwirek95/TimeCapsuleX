@@ -9,7 +9,6 @@
 <body>
 <div class="main-content">
     <div class="flex flex-col md:flex-row h-screen">
-        <!-- Sidebar -->
         <aside class="sidebar w-full md:w-80 flex flex-col items-center">
             <div class="flex mt-6 mb-12">
                 <img src="img/logo-mobile-text.png" alt="TimeCapsuleX" class="w-48">
@@ -50,16 +49,14 @@
             </nav>
         </aside>
 
-        <!-- Main Content -->
         <main class="flex-grow">
-            <!-- Header -->
-            <header class="dashboard-header flex flex-col md:flex-row md:justify-between">
+            <header class="dashboard-header flex justify-center md:justify-between">
                 <div class="hidden md:flex items-center ml-5 gap-4">
                     <i class="fa fa-arrow-right"></i>
                     <span class="uppercase font-semibold">Dashboard</span>
                 </div>
-                <div class="md:flex mr-5 gap-3 items-center">
-                    <button type="button" class="mr-4 uppercase wallet-button"><i class="fa-solid fa-wallet mr-1"></i> My Wallet</button>
+                <div class="flex mr-5 gap-3 items-center">
+                    <button type="button" class="mr-4 uppercase wallet-button"><i class="fa fa-wallet mr-1"></i> My Wallet</button>
                     <img
                             src="https://via.placeholder.com/40"
                             alt="User Avatar"
@@ -75,9 +72,8 @@
                 </div>
             </header>
 
-            <!-- Main Section -->
-            <section class="mt-6">
-                <div class="stats-cards flex flex-col sm:flex-row sm:justify-around mb-6">
+            <section class="mt-6 mb-6 mx-8">
+                <div class="stats-cards flex flex-col gap-2 sm:flex-row sm:justify-between">
                     <div class="stats-card">
                         <h3>Time-Based Capsules</h3>
                         <p>23</p>
@@ -100,36 +96,10 @@
                     </div>
                 </div>
 
-                <!-- Table -->
-                <div class="table-container">
-                    <table>
-                        <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Title</th>
-                            <th>Status</th>
-                            <th>Role</th>
-                            <th>Edit</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>John Doe</td>
-                            <td>Software Engineer</td>
-                            <td class="status"><span class="active">Active</span></td>
-                            <td>Owner</td>
-                            <td><a href="#">Edit</a></td>
-                        </tr>
-                        <tr>
-                            <td>Jane Smith</td>
-                            <td>Product Manager</td>
-                            <td class="status"><span class="inactive">Inactive</span></td>
-                            <td>Admin</td>
-                            <td><a href="#">Edit</a></td>
-                        </tr>
-                        </tbody>
-                    </table>
+                <div class="activities-card mt-6">
+                    <h3 class="font-semibold text-center">No new activities</h3>
                 </div>
+
             </section>
         </main>
     </div>
