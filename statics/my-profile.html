@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeCapsuleX - My profile</title>
+    <link rel="stylesheet" href="styles/pages/my-profile-styles.css">
+</head>
+<body>
+<div class="main-content">
+    <div class="flex flex-col md:flex-row h-screen">
+        <aside class="sidebar w-full md:w-80 flex flex-col items-center">
+            <div class="flex mt-6 mb-12">
+                <img src="img/logo-mobile-text.png" alt="TimeCapsuleX" class="w-48">
+            </div>
+            <nav class="mb-8">
+                <ul class="flex flex-col">
+                    <li>
+                        <a href="#" class="flex items-center gap-2 p-2">
+                            <i class="fas fa-chart-line"></i>Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center gap-2 p-2">
+                            <i class="fas fa-clock"></i>Time-based Capsules
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center gap-2 p-2">
+                            <i class="fas fa-flag-checkered"></i>Conditional Capsules
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center gap-2 p-2">
+                            <i class="fas fa-infinity"></i>Inheritable Capsules
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center gap-2 p-2">
+                            <i class="fas fa-users"></i>Group-based Capsules
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center gap-2 p-2 rounded">
+                            <i class="fas fa-bottle-water"></i>Message in a Bottle Capsules
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="flex-grow">
+            <header class="dashboard-header flex justify-center md:justify-between">
+                <div class="hidden md:flex items-center ml-5 gap-4">
+                    <i class="fa fa-arrow-right"></i>
+                    <span class="uppercase font-semibold">My Profile</span>
+                </div>
+                <div class="flex mr-5 gap-3 items-center">
+                    <button type="button" class="mr-4 uppercase wallet-button"><i class="fa fa-wallet mr-1"></i> My Wallet</button>
+                    <img
+                            src="https://via.placeholder.com/40"
+                            alt="User Avatar"
+                            class="rounded-full"
+                    />
+                    <div class="flex flex-col mr-6 mt-1 header-user">
+                        <span class="text-md font-semibold">Cwirek95</span>
+                        <a href="#" class="underline hover:opacity-80">My profile</a>
+                    </div>
+                    <div class="mr-2 hover:opacity-80 cursor-pointer">
+                        <i class="fa fa-sign-out logout-icon"></i>
+                    </div>
+                </div>
+            </header>
+
+            <section class="mt-6 mb-6 mx-8">
+                <div class="dashboard-card mt-6">
+                    <div class="flex flex-col gap-8 lg:flex-row">
+                        <div class="profile-card flex-1 p-6 pr-20">
+                            <h1 class="text-xl font-bold mb-8">Account data</h1>
+                            <div class="mb-4">
+                                <label class="block text-xs mb-1">Email:</label>
+                                <p class="text-base font-medium">user@example.com</p>
+                                <hr class="mt-2" />
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-xs mb-1">Username:</label>
+                                <p class="text-base font-medium">User123</p>
+                                <hr class="mt-2" />
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-xs mb-1">Account created on:</label>
+                                <p class="text-base font-medium">2024-01-01</p>
+                                <hr class="mt-2" />
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-xs mb-1">The first capsule created on:</label>
+                                <p class="text-base font-medium">2024-02-01
+                                <hr class="mt-2" />
+                            </div>
+                            <div>
+                                <label class="block text-xs mb-1">The last capsule created on:</label>
+                                <p class="text-base font-medium">2024-03-01</p>
+                                <hr class="mt-2" />
+                            </div>
+                        </div>
+
+                        <div class="change-password-section flex-1 p-6">
+                            <h1 class="text-xl font-bold mb-10">Change your password</h1>
+                            <form>
+                                <div class="mb-4">
+                                    <label class="block text-xs mb-1" for="current-password">Current password:</label>
+                                    <input
+                                            type="password"
+                                            id="current-password"
+                                    />
+                                </div>
+                                <div class="mb-4">
+                                    <label class="block text-xs mb-1" for="new-password">New password:</label>
+                                    <input
+                                            type="password"
+                                            id="new-password"
+                                    />
+                                </div>
+                                <div class="mb-4">
+                                    <label class="block text-xs mb-1" for="confirm-password">Confirm new password:</label>
+                                    <input
+                                            type="password"
+                                            id="confirm-password"
+                                    />
+                                </div>
+                                <button
+                                        type="submit"
+                                        class="change-password-button w-40 self-center"
+                                >
+                                    Submit
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+    </div>
+</div>
+</body>
+</html>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://kit.fontawesome.com/bd2d3af33f.js" crossorigin="anonymous"></script>

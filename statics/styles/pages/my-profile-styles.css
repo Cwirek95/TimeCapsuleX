@@ -1,0 +1,192 @@
+/* Core Colors */
+/* Special Colors */
+/* Shadows */
+/* Border Radius */
+.button, .change-password-section .change-password-button, .back-button, .check-it-button, .join-button-mobile, .top-button, .contact-button, .join-button {
+  font-weight: 600;
+  border-radius: 8px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+}
+.button:hover, .change-password-section .change-password-button:hover, .back-button:hover, .check-it-button:hover, .join-button-mobile:hover, .top-button:hover, .contact-button:hover, .join-button:hover {
+  transform: scale(1.05);
+  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.25);
+  opacity: 0.9;
+}
+
+/* Button Variants */
+.join-button {
+  background-color: #151924;
+  color: #F9E6BE;
+}
+
+.contact-button {
+  padding: 10px 30px;
+  background-color: #151924;
+  color: #F9E6BE;
+}
+
+.top-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #151924;
+  color: #F9E6BE;
+}
+
+.join-button-mobile {
+  background-color: white;
+  color: #151924;
+  padding: 4px 30px;
+}
+.join-button-mobile:hover {
+  background-color: #F9E6BE;
+}
+
+.check-it-button {
+  background-color: #151924;
+  color: #F9E6BE;
+  font-weight: 600;
+  padding: 10px 30px;
+}
+
+.back-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #F9E6BE;
+  color: #151924;
+}
+.back-button:hover {
+  transform: scale(1.05);
+}
+
+.wallet-button {
+  border: 2px solid #151924;
+  color: #151924;
+  font-weight: 600;
+  padding: 2px 15px;
+  border-radius: 8px;
+  transition: 0.4s ease;
+}
+.wallet-button:hover {
+  background-color: #151924;
+  color: #F9E6BE;
+}
+
+/* Inputs and Textareas */
+.input, .change-password-section form input,
+.change-password-section form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  background-color: #F9E6BE;
+  color: #151924;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1em;
+  transition: all 0.3s ease;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+}
+.input::placeholder, .change-password-section form input::placeholder,
+.change-password-section form textarea::placeholder {
+  color: #151924;
+  opacity: 0.6;
+}
+.input:focus, .change-password-section form input:focus,
+.change-password-section form textarea:focus {
+  background-color: #FDF1D6;
+  border-color: #53A7C1;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Form Layout */
+.form-section, .change-password-section {
+  background-color: #F9E6BE;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #151924;
+}
+
+body {
+  background-color: #F9E6BE;
+}
+
+.main-content {
+  background-color: #F9E6BE;
+}
+
+.sidebar {
+  background-color: #151924;
+  color: white;
+}
+.sidebar nav ul li {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  transition: background-color 0.3s ease;
+  opacity: 0.9;
+}
+.sidebar nav ul li:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.sidebar nav ul li.nav-active {
+  color: #F9E6BE;
+  border-left: 4px solid #F9E6BE;
+}
+.sidebar nav ul li a {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.9em;
+}
+.sidebar nav ul li i {
+  font-size: 1.1rem;
+  min-width: 40px;
+  text-align: center;
+}
+
+.dashboard-header {
+  min-height: 50px;
+  background-color: #FDF1D6;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.dashboard-header i {
+  font-size: 1rem;
+}
+.dashboard-header .header-user {
+  line-height: 1em;
+}
+.dashboard-header .header-user a {
+  font-size: 0.75em;
+}
+.dashboard-header .logout-icon {
+  transition: 0.4s ease;
+  transform: scale(1.1);
+}
+
+.dashboard-card {
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 1rem;
+}
+.dashboard-card hr {
+  border-color: #151924;
+  opacity: 0.4;
+}
+
+.change-password-section {
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+}
+.change-password-section .change-password-button {
+  background-color: #151924;
+  color: #F9E6BE;
+  padding: 10px 10px;
+}
+
+/*# sourceMappingURL=my-profile-styles.css.map */
