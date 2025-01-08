@@ -55,6 +55,14 @@
   padding: 10px 30px;
 }
 
+.check-it-table-button {
+  @extend .button;
+  background-color: $second-color;
+  color: $main-color;
+  font-weight: 600;
+  padding: 5px 15px;
+}
+
 .back-button {
   @extend .button;
   width: 40px;

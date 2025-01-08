@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TimeCapsuleX - Time-based Capsules</title>
+  <link rel="stylesheet" href="styles/pages/time-based-capsules-styles.css">
+</head>
+<body>
+<div class="main-content">
+  <div class="flex flex-col md:flex-row h-screen">
+    <aside class="sidebar w-full md:w-80 flex flex-col items-center">
+      <div class="flex mt-6 mb-12">
+        <img src="img/logo-mobile-text.png" alt="TimeCapsuleX" class="w-48">
+      </div>
+      <nav class="mb-8">
+        <ul class="flex flex-col">
+          <li>
+            <a href="#" class="flex items-center gap-2 p-2">
+              <i class="fas fa-chart-line"></i>Dashboard
+            </a>
+          </li>
+          <li class="nav-active">
+            <a href="#" class="flex items-center gap-2 p-2">
+              <i class="fas fa-clock"></i>Time-based Capsules
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center gap-2 p-2">
+              <i class="fas fa-flag-checkered"></i>Conditional Capsules
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center gap-2 p-2">
+              <i class="fas fa-infinity"></i>Inheritable Capsules
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center gap-2 p-2">
+              <i class="fas fa-users"></i>Group-based Capsules
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center gap-2 p-2 rounded">
+              <i class="fas fa-bottle-water"></i>Message in a Bottle Capsules
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="flex-grow">
+      <header class="dashboard-header flex justify-center md:justify-between">
+        <div class="hidden md:flex items-center ml-5 gap-4">
+          <i class="fa fa-arrow-right"></i>
+          <span class="uppercase font-semibold">Time-based Capsules</span>
+        </div>
+        <div class="flex mr-5 gap-3 items-center">
+          <button type="button" class="mr-4 uppercase wallet-button"><i class="fa fa-wallet mr-1"></i> My Wallet</button>
+          <img
+                  src="https://via.placeholder.com/40"
+                  alt="User Avatar"
+                  class="rounded-full"
+          />
+          <div class="flex flex-col mr-6 mt-1 header-user">
+            <span class="text-md font-semibold">Cwirek95</span>
+            <a href="#" class="underline hover:opacity-80">My profile</a>
+          </div>
+          <div class="mr-2 hover:opacity-80 cursor-pointer">
+            <i class="fa fa-sign-out logout-icon"></i>
+          </div>
+        </div>
+      </header>
+
+      <section class="mt-6 mb-6 mx-8">
+        <div class="capsules-card mt-6">
+          <div class="flex justify-between">
+          <form class="flex flex-col gap-5 w-full max-w-3xl">
+            <div class="flex flex-col md:flex-row md:gap-5 items-start">
+              <div class="flex flex-col gap-2 w-full md:w-1/2">
+                <p class="text-sm font-medium">Type: Time-based Capsule</p>
+                <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Name..."
+                        required
+                />
+                <input
+                        type="datetime-local"
+                        id="date-time"
+                        name="date-time"
+                        value="2025-01-01T12:00"
+                        required
+                />
+              </div>
+              <div class="w-full md:w-1/2">
+                <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        placeholder="Your message..."
+                        required
+                ></textarea>
+              </div>
+            </div>
+            <button
+                    type="submit"
+                    class="contact-button w-40"
+            >
+              Submit
+            </button>
+          </form>
+            <svg class="svg-background md:w-[150px] md:h-[150px] lg:w-[200px] lg:h-[200px] hidden lg:flex xl:mr-20" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="250" cy="250" r="250" fill="#151924"/>
+              <image href="img/logo.png" x="100" y="100" width="300" height="300" preserveAspectRatio="xMidYMid meet"/>
+            </svg>
+          </div>
+        </div>
+        <div class="shadow rounded-lg overflow-x-auto mt-6">
+          <table class="w-full table-auto">
+            <thead class="">
+            <tr>
+              <th class="px-4 py-2 text-left text-sm text-gray-600">Type</th>
+              <th class="px-4 py-2 text-left text-sm text-gray-600">Created at</th>
+              <th class="px-4 py-2 text-left text-sm text-gray-600">Name</th>
+              <th class="px-4 py-2 text-left text-sm text-gray-600">Status</th>
+              <th class="px-4 py-2 text-left text-sm text-gray-600">Time remaining until opening</th>
+              <th class="px-4 py-2 text-left text-sm text-gray-600"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="">
+              <td class="px-4 py-2">Time-based</td>
+              <td class="px-4 py-2">2024-12-19 12:50</td>
+              <td class="px-4 py-2">Capsule name 2</td>
+              <td class="px-4 py-2">
+                <span class="bg-gray-300 text-black-700 px-2 py-1 rounded-full text-xs">Waiting</span>
+              </td>
+              <td class="px-4 py-2">127H 31M 19S</td>
+              <td class="px-4 py-2">
+                <button type="button" class="check-it-table-button">Check it</button>
+              </td>
+            </tr>
+            <tr class="">
+              <td class="px-4 py-2">Time-based</td>
+              <td class="px-4 py-2">2024-11-01 22:19</td>
+              <td class="px-4 py-2">Capsule name 1</td>
+              <td class="px-4 py-2">
+                <span class="bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs">Opened</span>
+              </td>
+              <td class="px-4 py-2">---</td>
+              <td class="px-4 py-2">
+                <button type="button" class="check-it-table-button">Check it</button>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+</div>
+</body>
+</html>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://kit.fontawesome.com/bd2d3af33f.js" crossorigin="anonymous"></script>
