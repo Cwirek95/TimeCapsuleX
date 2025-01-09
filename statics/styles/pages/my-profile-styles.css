@@ -2,13 +2,13 @@
 /* Special Colors */
 /* Shadows */
 /* Border Radius */
-.button, .register-section .register-button, .back-button, .check-it-table-button, .check-it-button, .join-button-mobile, .top-button, .contact-button, .join-button {
+.button, .change-password-section .change-password-button, .back-button, .check-it-table-button, .check-it-button, .join-button-mobile, .top-button, .contact-button, .join-button {
   font-weight: 600;
   border-radius: 8px;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
 }
-.button:hover, .register-section .register-button:hover, .back-button:hover, .check-it-table-button:hover, .check-it-button:hover, .join-button-mobile:hover, .top-button:hover, .contact-button:hover, .join-button:hover {
+.button:hover, .change-password-section .change-password-button:hover, .back-button:hover, .check-it-table-button:hover, .check-it-button:hover, .join-button-mobile:hover, .top-button:hover, .contact-button:hover, .join-button:hover {
   transform: scale(1.05);
   box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.25);
   opacity: 0.9;
@@ -82,8 +82,8 @@
 }
 
 /* Inputs and Textareas */
-.input, .register-section form input,
-.register-section form textarea {
+.input, .change-password-section form input,
+.change-password-section form textarea {
   width: 100%;
   padding: 12px;
   margin-top: 5px;
@@ -96,13 +96,13 @@
   transition: all 0.3s ease;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
 }
-.input::placeholder, .register-section form input::placeholder,
-.register-section form textarea::placeholder {
+.input::placeholder, .change-password-section form input::placeholder,
+.change-password-section form textarea::placeholder {
   color: #151924;
   opacity: 0.6;
 }
-.input:focus, .register-section form input:focus,
-.register-section form textarea:focus {
+.input:focus, .change-password-section form input:focus,
+.change-password-section form textarea:focus {
   background-color: #FDF1D6;
   border-color: #53A7C1;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
@@ -110,7 +110,7 @@
 }
 
 /* Form Layout */
-.form-section, .register-section {
+.form-section, .change-password-section {
   background-color: #F9E6BE;
   padding: 40px;
   border-radius: 8px;
@@ -120,27 +120,80 @@
 
 body {
   background-color: #F9E6BE;
-  color: #151924;
-  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, #F9E6BE 70%);
-  background-size: cover;
 }
 
-/* Register Left Side */
-.register-left-side {
+.main-content {
+  background-color: #F9E6BE;
+}
+
+.sidebar {
+  background-color: #151924;
+  color: white;
+}
+.sidebar nav ul li {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  transition: background-color 0.3s ease;
+  opacity: 0.9;
+}
+.sidebar nav ul li:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.sidebar nav ul li.nav-active {
+  color: #F9E6BE;
+  border-left: 4px solid #F9E6BE;
+}
+.sidebar nav ul li a {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.9em;
+}
+.sidebar nav ul li i {
+  font-size: 1.1rem;
+  min-width: 40px;
+  text-align: center;
+}
+
+.dashboard-header {
+  min-height: 50px;
+  background-color: #FDF1D6;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.dashboard-header i {
+  font-size: 1rem;
+}
+.dashboard-header .header-user {
+  line-height: 1em;
+}
+.dashboard-header .header-user a {
+  font-size: 0.75em;
+}
+.dashboard-header .logout-icon {
+  transition: 0.4s ease;
+  transform: scale(1.1);
+}
+
+.dashboard-card {
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 1rem;
+}
+.dashboard-card hr {
+  border-color: #151924;
+  opacity: 0.4;
+}
+
+.change-password-section {
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+}
+.change-password-section .change-password-button {
   background-color: #151924;
   color: #F9E6BE;
+  padding: 10px 10px;
 }
 
-/* Register-Specific Styles */
-.register-section {
-  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, #F9E6BE 70%);
-  background-size: cover;
-  margin-bottom: 20px;
-}
-.register-section .register-button {
-  background-color: #151924;
-  color: #F9E6BE;
-  padding: 10px 0;
-}
-
-/*# sourceMappingURL=register-styles.css.map */
+/*# sourceMappingURL=my-profile-styles.css.map */

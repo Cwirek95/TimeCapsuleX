@@ -1,0 +1,146 @@
+@use '../common/_variables.scss' as *;
+@use '../common/_buttons.scss' as *;
+@use '../common/_forms.scss' as *;
+
+body {
+  background-color: $main-color;
+}
+
+.main-content {
+  background-color: $main-color;
+}
+
+.sidebar {
+  background-color: $second-color;
+  color: white;
+
+  nav ul li {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    transition: background-color 0.3s ease;
+    opacity: 0.9;
+
+    &:hover {
+      background-color: $highlight-color;
+    }
+
+    &.nav-active {
+      color: $main-color;
+      border-left: 4px solid $main-color;
+    }
+
+    a {
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 0.9em;
+    }
+
+    i {
+      font-size: 1.1rem;
+      min-width: 40px;
+      text-align: center;
+    }
+  }
+}
+
+.dashboard-header {
+  min-height: 50px;
+  background-color: $input-focus-color;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+
+  i {
+    font-size: 1rem;
+  }
+
+  .header-user {
+    line-height: 1em;
+
+    a {
+      font-size: 0.75em;
+    }
+  }
+
+  .logout-icon {
+    transition: 0.4s ease;
+    transform: scale(1.1);
+  }
+}
+
+.capsules-card {
+  background-color: $card-color;
+  box-shadow: $button-shadow;
+  border-radius: $radius-medium;
+  padding: 1rem;
+
+  form {
+    input,
+    textarea {
+      @extend .input;
+    }
+    input[type=datetime-local] {
+        color: rgba($second-color, 0.6);
+    }
+  }
+}
+
+table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+
+  thead {
+    background-color: $input-focus-color;
+
+    th {
+      padding: 0.5rem;
+      text-align: left;
+      font-size: 0.875rem;
+      color: #666; /* Możesz zdefiniować to jako zmienną */
+    }
+  }
+
+  tbody {
+    tr {
+      &:nth-child(odd) {
+        background-color: $card-color;
+      }
+
+      &:nth-child(even) {
+        background-color: $highlight-color;
+      }
+
+      td {
+        padding: 0.5rem;
+      }
+
+      .status {
+        span {
+          display: inline-block;
+          padding: 0.25rem 0.5rem;
+          border-radius: $radius-small;
+          font-size: 0.75rem;
+
+          &.active {
+            background-color: rgba(72, 187, 120, 0.2); /* Zielony */
+            color: #48BB78;
+          }
+
+          &.inactive {
+            background-color: rgba(245, 101, 101, 0.2); /* Czerwony */
+            color: #F56565;
+          }
+        }
+      }
+
+      a {
+        color: $third-color;
+        text-decoration: underline;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

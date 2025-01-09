@@ -1,0 +1,163 @@
+/* Core Colors */
+/* Special Colors */
+/* Shadows */
+/* Border Radius */
+.button, .back-button, .check-it-table-button, .check-it-button, .join-button-mobile, .top-button, .contact-button, .join-button {
+  font-weight: 600;
+  border-radius: 8px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+}
+.button:hover, .back-button:hover, .check-it-table-button:hover, .check-it-button:hover, .join-button-mobile:hover, .top-button:hover, .contact-button:hover, .join-button:hover {
+  transform: scale(1.05);
+  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.25);
+  opacity: 0.9;
+}
+
+/* Button Variants */
+.join-button {
+  background-color: #151924;
+  color: #F9E6BE;
+}
+
+.contact-button {
+  padding: 10px 30px;
+  background-color: #151924;
+  color: #F9E6BE;
+}
+
+.top-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #151924;
+  color: #F9E6BE;
+}
+
+.join-button-mobile {
+  background-color: white;
+  color: #151924;
+  padding: 4px 30px;
+}
+.join-button-mobile:hover {
+  background-color: #F9E6BE;
+}
+
+.check-it-button {
+  background-color: #151924;
+  color: #F9E6BE;
+  font-weight: 600;
+  padding: 10px 30px;
+}
+
+.check-it-table-button {
+  background-color: #151924;
+  color: #F9E6BE;
+  font-weight: 600;
+  padding: 5px 15px;
+}
+
+.back-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #F9E6BE;
+  color: #151924;
+}
+.back-button:hover {
+  transform: scale(1.05);
+}
+
+.wallet-button {
+  border: 2px solid #151924;
+  color: #151924;
+  font-weight: 600;
+  padding: 2px 15px;
+  border-radius: 8px;
+  transition: 0.4s ease;
+}
+.wallet-button:hover {
+  background-color: #151924;
+  color: #F9E6BE;
+}
+
+body {
+  background-color: #F9E6BE;
+}
+
+.main-content {
+  background-color: #F9E6BE;
+}
+
+.sidebar {
+  background-color: #151924;
+  color: white;
+}
+.sidebar nav ul li {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  transition: background-color 0.3s ease;
+  opacity: 0.9;
+}
+.sidebar nav ul li:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.sidebar nav ul li.nav-active {
+  color: #F9E6BE;
+  border-left: 4px solid #F9E6BE;
+}
+.sidebar nav ul li a {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.9em;
+}
+.sidebar nav ul li i {
+  font-size: 1.1rem;
+  min-width: 40px;
+  text-align: center;
+}
+
+.dashboard-header {
+  min-height: 50px;
+  background-color: #FDF1D6;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.dashboard-header i {
+  font-size: 1rem;
+}
+.dashboard-header .header-user {
+  line-height: 1em;
+}
+.dashboard-header .header-user a {
+  font-size: 0.75em;
+}
+.dashboard-header .logout-icon {
+  transition: 0.4s ease;
+  transform: scale(1.1);
+}
+
+section .stats-card {
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  text-align: center;
+  padding: 1rem;
+}
+section .stats-card h3 {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}
+section .stats-card p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.activities-card {
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+/*# sourceMappingURL=dashboard-home-styles.css.map */

@@ -1,0 +1,92 @@
+@use '../common/_variables.scss' as *;
+@use '../common/_buttons.scss' as *;
+
+body {
+  background-color: $main-color;
+}
+
+.main-content {
+  background-color: $main-color;
+}
+
+.sidebar {
+  background-color: $second-color;
+  color: white;
+
+  nav ul li {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    transition: background-color 0.3s ease;
+    opacity: 0.9;
+
+    &:hover {
+      background-color: $highlight-color;
+    }
+
+    &.nav-active {
+      color: $main-color;
+      border-left: 4px solid $main-color;
+    }
+
+    a {
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 0.9em;
+    }
+
+    i {
+      font-size: 1.1rem;
+      min-width: 40px;
+      text-align: center;
+    }
+  }
+}
+
+.dashboard-header {
+  min-height: 50px;
+  background-color: $input-focus-color;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+
+  i {
+    font-size: 1rem;
+  }
+
+  .header-user {
+    line-height: 1em;
+
+    a {
+      font-size: 0.75em;
+    }
+  }
+
+  .logout-icon {
+    transition: 0.4s ease;
+    transform: scale(1.1);
+  }
+}
+
+section .stats-card {
+  background-color: $card-color;
+  box-shadow: $button-shadow;
+  border-radius: $radius-medium;
+  text-align: center;
+  padding: 1rem;
+
+  h3 {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+}
+
+.activities-card {
+  background-color: $card-color;
+  box-shadow: $button-shadow;
+  border-radius: $radius-medium;
+  padding: 1rem;
+}
