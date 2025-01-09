@@ -82,3 +82,8 @@ fabric.properties
 
 # Local History for Visual Studio Code
 .history/
+
+# node_modules and .angular
+node_modules/
+.angular/
+
