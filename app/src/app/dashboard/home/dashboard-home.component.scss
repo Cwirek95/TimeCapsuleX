@@ -1,0 +1,26 @@
+@use "../../shared/styles/common/_variables.scss" as *;
+
+section .stats-card {
+  background-color: $card-color;
+  box-shadow: $button-shadow;
+  border-radius: $radius-medium;
+  text-align: center;
+  padding: 1rem;
+
+  h3 {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+}
+
+.activities-card {
+  background-color: $card-color;
+  box-shadow: $button-shadow;
+  border-radius: $radius-medium;
+  padding: 1rem;
+}

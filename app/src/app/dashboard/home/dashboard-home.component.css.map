@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"dashboard-home.component.css"}
+{"version":3,"sourceRoot":"","sources":["../../shared/styles/common/_variables.scss","dashboard-home.component.scss"],"names":[],"mappings":"AAAA;AAOA;AAKA;AAIA;ACdA;EACE,kBDOW;ECNX,YDSc;ECRd,eDac;ECZd;EACA;;AAEA;EACE;EACA;;AAGF;EACE;EACA;;;AAIJ;EACE,kBDXW;ECYX,YDTc;ECUd,eDLc;ECMd","file":"dashboard-home.component.css"}

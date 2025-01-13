@@ -1,3 +1,28 @@
+/* Core Colors */
+/* Special Colors */
+/* Shadows */
+/* Border Radius */
+section .stats-card {
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  text-align: center;
+  padding: 1rem;
+}
+section .stats-card h3 {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}
+section .stats-card p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
 
+.activities-card {
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 1rem;
+}
 
 /*# sourceMappingURL=dashboard-home.component.css.map */
