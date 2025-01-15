@@ -1,0 +1,81 @@
+@use "../../shared/styles/common/_variables.scss" as *;
+@use "../../shared/styles/common/_buttons.scss" as *;
+@use "../../shared/styles/common/_forms.scss" as *;
+
+.capsules-card {
+  background-color: $card-color;
+  box-shadow: $button-shadow;
+  border-radius: $radius-medium;
+  padding: 1rem;
+
+  form {
+    input,
+    textarea {
+      @extend .input;
+    }
+    input[type="datetime-local"] {
+      color: rgba($second-color, 0.6);
+    }
+  }
+}
+
+table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+
+  thead {
+    background-color: $input-focus-color;
+
+    th {
+      padding: 0.5rem;
+      text-align: left;
+      font-size: 0.875rem;
+      color: #666;
+    }
+  }
+
+  tbody {
+    tr {
+      &:nth-child(odd) {
+        background-color: $card-color;
+      }
+
+      &:nth-child(even) {
+        background-color: $highlight-color;
+      }
+
+      td {
+        padding: 0.5rem;
+      }
+
+      .status {
+        span {
+          display: inline-block;
+          padding: 0.25rem 0.5rem;
+          border-radius: $radius-small;
+          font-size: 0.75rem;
+
+          &.active {
+            background-color: rgba(72, 187, 120, 0.2); /* Zielony */
+            color: #48bb78;
+          }
+
+          &.inactive {
+            background-color: rgba(245, 101, 101, 0.2); /* Czerwony */
+            color: #f56565;
+          }
+        }
+      }
+
+      a {
+        color: $third-color;
+        text-decoration: underline;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

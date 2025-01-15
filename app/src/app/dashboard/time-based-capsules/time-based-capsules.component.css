@@ -2,13 +2,13 @@
 /* Special Colors */
 /* Shadows */
 /* Border Radius */
-.button, .register-section .register-button, .back-button, .check-it-table-button, .check-it-button, .join-button-mobile, .top-button, .contact-button, .join-button {
+.button, .back-button, .check-it-table-button, .check-it-button, .join-button-mobile, .top-button, .contact-button, .join-button {
   font-weight: 600;
   border-radius: 8px;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
 }
-.button:hover, .register-section .register-button:hover, .back-button:hover, .check-it-table-button:hover, .check-it-button:hover, .join-button-mobile:hover, .top-button:hover, .contact-button:hover, .join-button:hover {
+.button:hover, .back-button:hover, .check-it-table-button:hover, .check-it-button:hover, .join-button-mobile:hover, .top-button:hover, .contact-button:hover, .join-button:hover {
   transform: scale(1.05);
   box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.25);
   opacity: 0.9;
@@ -154,8 +154,8 @@ body {
   text-align: center;
 }
 
-.input, .register-section form input:not([type=checkbox]),
-.register-section form textarea {
+.input, .capsules-card form input,
+.capsules-card form textarea {
   width: 100%;
   padding: 12px;
   margin-top: 5px;
@@ -168,25 +168,25 @@ body {
   transition: all 0.3s ease;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
 }
-.input::placeholder, .register-section form input:not([type=checkbox])::placeholder,
-.register-section form textarea::placeholder {
+.input::placeholder, .capsules-card form input::placeholder,
+.capsules-card form textarea::placeholder {
   color: #151924;
   opacity: 0.6;
 }
-.input:focus, .register-section form input:focus:not([type=checkbox]),
-.register-section form textarea:focus {
+.input:focus, .capsules-card form input:focus,
+.capsules-card form textarea:focus {
   background-color: #fdf1d6;
   border-color: #53a7c1;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   transform: translateY(-2px);
 }
-.input.input-error, .register-section form input.input-error:not([type=checkbox]),
-.register-section form textarea.input-error {
+.input.input-error, .capsules-card form input.input-error,
+.capsules-card form textarea.input-error {
   border-color: #e63946;
   animation: shake 0.9s ease;
 }
 
-.form-section, .register-section {
+.form-section {
   background-color: #f9e6be;
   padding: 40px;
   border-radius: 8px;
@@ -194,25 +194,59 @@ body {
   border: 1px solid #151924;
 }
 
-.register-section {
-  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, #f9e6be 70%);
-  background-size: cover;
-  margin-bottom: 20px;
+.capsules-card {
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 1rem;
 }
-.register-section form label span {
-  color: #151924;
-}
-.register-section form input[type=checkbox].input-error {
-  appearance: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  background-color: white;
-  box-shadow: 0 0 2px 2px #e63946;
-}
-.register-section .register-button {
-  background-color: #151924;
-  color: #f9e6be;
-  padding: 10px 0;
+.capsules-card form input[type=datetime-local] {
+  color: rgba(21, 25, 36, 0.6);
 }
 
-/*# sourceMappingURL=register-form.component.css.map */
+table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+table thead {
+  background-color: #fdf1d6;
+}
+table thead th {
+  padding: 0.5rem;
+  text-align: left;
+  font-size: 0.875rem;
+  color: #666;
+}
+table tbody tr:nth-child(odd) {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+table tbody tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+table tbody tr td {
+  padding: 0.5rem;
+}
+table tbody tr .status span {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+}
+table tbody tr .status span.active {
+  background-color: rgba(72, 187, 120, 0.2); /* Zielony */
+  color: #48bb78;
+}
+table tbody tr .status span.inactive {
+  background-color: rgba(245, 101, 101, 0.2); /* Czerwony */
+  color: #f56565;
+}
+table tbody tr a {
+  color: #53a7c1;
+  text-decoration: underline;
+}
+table tbody tr a:hover {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=time-based-capsules.component.css.map */

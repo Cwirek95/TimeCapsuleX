@@ -4,6 +4,7 @@ import { RegisterComponent } from "./auth/register/register.component";
 import { LoginComponent } from "./auth/login/login.component";
 import { DashboardComponent } from "./dashboard/dashboard.component";
 import { DashboardHomeComponent } from "./dashboard/home/dashboard-home.component";
+import { TimeBasedCapsulesComponent } from "./dashboard/time-based-capsules/time-based-capsules.component";
 
 export const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -12,6 +13,10 @@ export const routes: Routes = [
   {
     path: "dashboard",
     component: DashboardComponent,
-    children: [{ path: "", component: DashboardHomeComponent }],
+    children: [
+      { path: "", redirectTo: "home", pathMatch: "full" },
+      { path: "home", component: DashboardHomeComponent },
+      { path: "time-based-capsules", component: TimeBasedCapsulesComponent },
+    ],
   },
 ];

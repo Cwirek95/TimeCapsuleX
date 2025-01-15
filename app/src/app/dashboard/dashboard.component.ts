@@ -21,12 +21,12 @@ import { NgOptimizedImage } from "@angular/common";
           <nav class="mb-8">
             <ul class="flex flex-col">
               <li routerLinkActive="nav-active">
-                <a routerLink="/dashboard" class="flex items-center gap-2 p-2">
+                <a routerLink="/dashboard/home" class="flex items-center gap-2 p-2">
                   <i class="fas fa-chart-line"></i>Dashboard
                 </a>
               </li>
-              <li>
-                <a href="#" class="flex items-center gap-2 p-2">
+              <li routerLinkActive="nav-active">
+                <a routerLink="/dashboard/time-based-capsules" class="flex items-center gap-2 p-2">
                   <i class="fas fa-clock"></i>Time-based Capsules
                 </a>
               </li>
