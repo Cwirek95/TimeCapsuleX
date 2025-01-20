@@ -1,0 +1,13 @@
+@use "../../../shared/styles/common/_variables.scss" as *;
+@use "../../../shared/styles/common/_buttons.scss" as *;
+@use "../../../shared/styles/common/_forms.scss" as *;
+
+form {
+  input,
+  textarea {
+    @extend .input;
+  }
+  input[type="datetime-local"] {
+    color: rgba($second-color, 0.6);
+  }
+}
