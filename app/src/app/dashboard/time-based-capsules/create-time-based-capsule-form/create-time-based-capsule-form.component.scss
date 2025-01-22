@@ -10,4 +10,12 @@ form {
   input[type="datetime-local"] {
     color: rgba($second-color, 0.6);
   }
+  .result-div {
+    transition: opacity 0.8s ease-in-out;
+    opacity: 1;
+  }
+
+  .result-div.ng-hide {
+    opacity: 0;
+  }
 }

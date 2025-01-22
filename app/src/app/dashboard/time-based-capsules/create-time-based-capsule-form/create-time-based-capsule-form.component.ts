@@ -8,6 +8,8 @@ import {
   Validators,
 } from "@angular/forms";
 import { NgClass, NgStyle } from "@angular/common";
+import { CreateTimeBasedCapsuleStatus } from "./create-time-based-capsule-status";
+import { CreateTimeBasedCapsuleService } from "./create-time-based-capsule-service";
 
 @Component({
   selector: "create-time-based-capsule-form",
@@ -76,13 +78,27 @@ import { NgClass, NgStyle } from "@angular/common";
             </div>
           </div>
         </div>
-        <button type="submit" class="contact-button w-40" [disabled]="isLoading">
-          @if (isLoading) {
-            <div class="spinner"></div>
-          } @else {
-            Submit
+        <div class="flex gap-3 mt-1">
+          <button type="submit" class="contact-button w-40" [disabled]="isLoading">
+            @if (isLoading) {
+              <div class="spinner"></div>
+            } @else {
+              Submit
+            }
+          </button>
+          @if (showResult) {
+            <div
+              class="self-center rounded-lg py-1 result-div"
+              [ngClass]="{
+                'error-alert': capsuleService.sendResult() === CreateTimeBasedCapsuleStatus.Error,
+                'success-alert': capsuleService.sendResult() === CreateTimeBasedCapsuleStatus.Success,
+              }"
+              role="alert"
+            >
+              <span>{{ submitResultMessage }}</span>
+            </div>
           }
-        </button>
+        </div>
       </form>
       <svg
         class="svg-background md:w-[150px] md:h-[150px] lg:w-[200px] lg:h-[200px] hidden lg:flex xl:mr-20"
@@ -110,8 +126,12 @@ export class CreateTimeBasedCapsuleFormComponent {
   submitted = false;
   isLoading = false;
   submitResultMessage: string = "";
+  showResult = false;
 
-  constructor(private fb: FormBuilder) {
+  constructor(
+    private fb: FormBuilder,
+    protected capsuleService: CreateTimeBasedCapsuleService,
+  ) {
     this.createCapsuleForm = this.fb.group({
       name: ["", Validators.required],
       executedAt: ["", [Validators.required, futureDateValidator]],
@@ -122,11 +142,35 @@ export class CreateTimeBasedCapsuleFormComponent {
   onSubmit(event: Event): void {
     event.preventDefault();
     this.submitted = true;
+
+    if (this.createCapsuleForm.valid) {
+      this.isLoading = true;
+      const { name, executedAt, message } = this.createCapsuleForm.value;
+      this.capsuleService
+        .sendEmail(name, executedAt, message)
+        .then(() => {
+          this.submitResultMessage = "The capsule was created successfully!";
+        })
+        .catch((error) => {
+          this.submitResultMessage = "An error occurred while creating the capsule";
+        })
+        .finally(() => {
+          this.submitted = false;
+          this.isLoading = false;
+          this.showResult = true;
+          this.resetForm();
+          setTimeout(() => {
+            this.showResult = false;
+          }, 5000);
+        });
+    }
   }
 
   resetForm(): void {
     this.createCapsuleForm.reset();
   }
+
+  protected readonly CreateTimeBasedCapsuleStatus = CreateTimeBasedCapsuleStatus;
 }
 
 export function futureDateValidator(control: AbstractControl): ValidationErrors | null {

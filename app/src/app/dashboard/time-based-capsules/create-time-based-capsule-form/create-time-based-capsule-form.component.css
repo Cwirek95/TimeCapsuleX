@@ -197,5 +197,12 @@ form textarea.input-error {
 form input[type=datetime-local] {
   color: rgba(21, 25, 36, 0.6);
 }
+form .result-div {
+  transition: opacity 0.8s ease-in-out;
+  opacity: 1;
+}
+form .result-div.ng-hide {
+  opacity: 0;
+}
 
 /*# sourceMappingURL=create-time-based-capsule-form.component.css.map */
