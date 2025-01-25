@@ -2,13 +2,13 @@
 /* Special Colors */
 /* Shadows */
 /* Border Radius */
-.button, .back-button, .check-it-table-button, .check-it-button, .join-button-mobile, .top-button, .contact-button, .join-button {
+.button, .change-password-button, .back-button, .check-it-table-button, .check-it-button, .join-button-mobile, .top-button, .contact-button, .join-button {
   font-weight: 600;
   border-radius: 8px;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
 }
-.button:hover, .back-button:hover, .check-it-table-button:hover, .check-it-button:hover, .join-button-mobile:hover, .top-button:hover, .contact-button:hover, .join-button:hover {
+.button:hover, .change-password-button:hover, .back-button:hover, .check-it-table-button:hover, .check-it-button:hover, .join-button-mobile:hover, .top-button:hover, .contact-button:hover, .join-button:hover {
   transform: scale(1.05);
   box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.25);
   opacity: 0.9;
@@ -81,6 +81,12 @@
 .wallet-button:hover {
   background-color: #151924;
   color: #f9e6be;
+}
+
+.change-password-button {
+  background-color: #151924;
+  color: #f9e6be;
+  padding: 10px 10px;
 }
 
 .capsules-card {

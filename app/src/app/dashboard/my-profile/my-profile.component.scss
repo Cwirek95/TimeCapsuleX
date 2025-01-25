@@ -1,0 +1,22 @@
+@use "../../shared/styles/common/_variables" as *;
+@use "../../shared/styles/common/_forms" as *;
+@use "../../shared/styles/common/_buttons" as *;
+
+.profile-card {
+  background-color: $card-color;
+  box-shadow: $button-shadow;
+  border-radius: $radius-medium;
+  padding: 1rem;
+
+  hr {
+    border-color: $second-color;
+    opacity: 0.4;
+  }
+}
+
+form {
+  input,
+  textarea {
+    @extend .input;
+  }
+}

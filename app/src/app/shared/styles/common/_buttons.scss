@@ -95,3 +95,10 @@
     color: $main-color;
   }
 }
+
+.change-password-button {
+  @extend .button;
+  background-color: $second-color;
+  color: $main-color;
+  padding: 10px 10px;
+}

@@ -73,8 +73,8 @@ body {
   text-align: center;
 }
 
-.input, .contact-right form input,
-.contact-right form textarea {
+.input, form input,
+form textarea {
   width: 100%;
   padding: 12px;
   margin-top: 5px;
@@ -87,20 +87,20 @@ body {
   transition: all 0.3s ease;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
 }
-.input::placeholder, .contact-right form input::placeholder,
-.contact-right form textarea::placeholder {
+.input::placeholder, form input::placeholder,
+form textarea::placeholder {
   color: #151924;
   opacity: 0.6;
 }
-.input:focus, .contact-right form input:focus,
-.contact-right form textarea:focus {
+.input:focus, form input:focus,
+form textarea:focus {
   background-color: #fdf1d6;
   border-color: #53a7c1;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   transform: translateY(-2px);
 }
-.input.input-error, .contact-right form input.input-error,
-.contact-right form textarea.input-error {
+.input.input-error, form input.input-error,
+form textarea.input-error {
   border-color: #e63946;
   animation: shake 0.9s ease;
 }
@@ -113,13 +113,13 @@ body {
   border: 1px solid #151924;
 }
 
-.button, .contact-right form .contact-button, .change-password-button, .back-button, .check-it-table-button, .check-it-button, .join-button-mobile, .top-button, .contact-button, .join-button {
+.button, .change-password-button, .back-button, .check-it-table-button, .check-it-button, .join-button-mobile, .top-button, .contact-button, .join-button {
   font-weight: 600;
   border-radius: 8px;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
 }
-.button:hover, .contact-right form .contact-button:hover, .change-password-button:hover, .back-button:hover, .check-it-table-button:hover, .check-it-button:hover, .join-button-mobile:hover, .top-button:hover, .contact-button:hover, .join-button:hover {
+.button:hover, .change-password-button:hover, .back-button:hover, .check-it-table-button:hover, .check-it-button:hover, .join-button-mobile:hover, .top-button:hover, .contact-button:hover, .join-button:hover {
   transform: scale(1.05);
   box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.25);
   opacity: 0.9;
@@ -200,15 +200,15 @@ body {
   padding: 10px 10px;
 }
 
-.contact-right form .contact-button {
-  cursor: pointer;
+.profile-card {
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 1rem;
 }
-.contact-right form .contact-button:disabled {
-  opacity: 0.9;
-  cursor: not-allowed;
-  transition: none;
-  transform: none;
-  box-shadow: none;
+.profile-card hr {
+  border-color: #151924;
+  opacity: 0.4;
 }
 
-/*# sourceMappingURL=contact-form-component.css.map */
+/*# sourceMappingURL=my-profile.component.css.map */

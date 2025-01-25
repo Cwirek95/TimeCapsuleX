@@ -67,7 +67,7 @@ import { NgOptimizedImage } from "@angular/common";
               <img src="https://via.placeholder.com/40" alt="User Avatar" class="rounded-full" />
               <div class="flex flex-col mr-6 mt-1 header-user">
                 <span class="text-md font-semibold">Cwirek95</span>
-                <a href="#" class="underline hover:opacity-80">My profile</a>
+                <a routerLink="/dashboard/my-profile" class="underline hover:opacity-80">My profile</a>
               </div>
               <div class="mr-2 hover:opacity-80 cursor-pointer">
                 <i class="fa fa-sign-out logout-icon"></i>
