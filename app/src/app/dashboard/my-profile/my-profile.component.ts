@@ -1,10 +1,9 @@
 import { Component } from "@angular/core";
-import { RouterLink, RouterLinkActive, RouterOutlet } from "@angular/router";
-import { NgOptimizedImage } from "@angular/common";
+import { ChangePasswordComponent } from "./change-password/change-password.component";
 
 @Component({
   selector: "app-dashboard-my-profile",
-  imports: [RouterOutlet, RouterLink, NgOptimizedImage, RouterLinkActive],
+  imports: [ChangePasswordComponent],
   template: `
     <section class="mt-6 mb-6 mx-8">
       <div class="profile-card mt-6">
@@ -37,25 +36,9 @@ import { NgOptimizedImage } from "@angular/common";
               <hr class="mt-2" />
             </div>
           </div>
-
-          <div class="change-password-section flex-1 p-6">
-            <h1 class="text-xl font-bold mb-10">Change your password</h1>
-            <form>
-              <div class="mb-4">
-                <label class="block text-xs mb-1" for="current-password">Current password:</label>
-                <input type="password" id="current-password" />
-              </div>
-              <div class="mb-4">
-                <label class="block text-xs mb-1" for="new-password">New password:</label>
-                <input type="password" id="new-password" />
-              </div>
-              <div class="mb-4">
-                <label class="block text-xs mb-1" for="confirm-password">Confirm new password:</label>
-                <input type="password" id="confirm-password" />
-              </div>
-              <button type="submit" class="change-password-button w-40 self-center">Submit</button>
-            </form>
-          </div>
+          <app-dashboard-my-profile-change-password
+            class="flex-1 p-6"
+          ></app-dashboard-my-profile-change-password>
         </div>
       </div>
     </section>

@@ -13,10 +13,3 @@
     opacity: 0.4;
   }
 }
-
-form {
-  input,
-  textarea {
-    @extend .input;
-  }
-}
