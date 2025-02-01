@@ -1,6 +1,8 @@
 import { Component } from "@angular/core";
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from "@angular/forms";
 import { NgClass, NgStyle } from "@angular/common";
+import { ChangePasswordStatus } from "./change-password-status";
+import { ChangePasswordService } from "./change-password-service";
 
 @Component({
   selector: "app-dashboard-my-profile-change-password",
@@ -67,7 +69,30 @@ import { NgClass, NgStyle } from "@angular/common";
             Passwords must be identical
           </p>
         </div>
-        <button type="submit" class="change-password-button w-40 self-center">Submit</button>
+        <div class="flex gap-3 mt-1">
+          <button type="submit" class="change-password-button w-40" [disabled]="isLoading">
+            @if (isLoading) {
+              <div class="spinner"></div>
+            } @else {
+              Submit
+            }
+          </button>
+          @if (showResult) {
+            <div
+              class="self-center rounded-lg py-1"
+              [ngClass]="{
+                'error-alert': changePasswordService.changeResult() === ChangePasswordStatus.Error,
+                'success-alert': changePasswordService.changeResult() === ChangePasswordStatus.Success,
+              }"
+              [ngStyle]="{
+                opacity: changePasswordService.changeResult() !== ChangePasswordStatus.None ? 1 : 0,
+              }"
+              role="alert"
+            >
+              <span>{{ submitResultMessage }}</span>
+            </div>
+          }
+        </div>
       </form>
     </div>
   `,
@@ -78,13 +103,19 @@ import { NgClass, NgStyle } from "@angular/common";
 export class ChangePasswordComponent {
   changePasswordForm: FormGroup;
   submitted = false;
+  isLoading = false;
+  submitResultMessage: string = "";
+  showResult = false;
 
-  constructor(private fb: FormBuilder) {
+  constructor(
+    private fb: FormBuilder,
+    protected changePasswordService: ChangePasswordService,
+  ) {
     this.changePasswordForm = this.fb.group(
       {
         currentPassword: ["", Validators.required],
         newPassword: ["", [Validators.required, Validators.minLength(8)]],
-        confirmPassword: ["", Validators.required],
+        confirmPassword: ["", []],
       },
       { validators: this.passwordMatchValidator },
     );
@@ -95,8 +126,30 @@ export class ChangePasswordComponent {
     this.submitted = true;
 
     if (this.changePasswordForm.valid) {
-      // Handle form submission
+      this.isLoading = true;
+      const { currentPassword, newPassword } = this.changePasswordForm.value;
+      this.changePasswordService
+        .changePassword(currentPassword, newPassword)
+        .then(() => {
+          this.submitResultMessage = "Password changed successfully!";
+        })
+        .catch((error) => {
+          this.submitResultMessage = "An error occurred while changing the password";
+        })
+        .finally(() => {
+          this.submitted = false;
+          this.isLoading = false;
+          this.showResult = true;
+          this.resetForm();
+          setTimeout(() => {
+            this.showResult = false;
+          }, 5000);
+        });
     }
+  }
+
+  resetForm(): void {
+    this.changePasswordForm.reset();
   }
 
   passwordMatchValidator(group: FormGroup): { [key: string]: any } | null {
@@ -105,4 +158,6 @@ export class ChangePasswordComponent {
 
     return newPassword === confirmPassword ? null : { passwordMismatch: true };
   }
+
+  protected readonly ChangePasswordStatus = ChangePasswordStatus;
 }
