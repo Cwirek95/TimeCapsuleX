@@ -84,6 +84,5 @@ fabric.properties
 .history/
 
 # node_modules and .angular
-node_modules/
-.angular/
-
+**/node_modules/
+**/.angular/
