@@ -7,6 +7,7 @@
 <br>
 
 [Introduction](#introduction) <br>
+[Goals and motivations](#goals-and-motivations) <br>
 [Contact](#contact) <br>
 
  <br>
@@ -22,6 +23,16 @@ TimeCapsuleX is a modern solution for securely storing and sharing memories, mes
 | Frontend | ![Angular](https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) |
 | Blockchain | ![Solana](https://img.shields.io/badge/Solana-000?style=for-the-badge&logo=Solana&logoColor=9945FF) ![Rust](https://img.shields.io/badge/rust-%23E34F26.svg?style=for-the-badge&logo=rust&logoColor=white)                               |
 
+<br>
+<br>
+
+# Goals and motivations
+
+TimeCapsuleX is designed to revolutionize the way digital memories, messages, and important files are preserved and shared over time. The goal is to provide a secure, private, and verifiable method for storing valuable information, ensuring its integrity and accessibility only to intended recipients.
+
+By utilizing blockchain technology, TimeCapsuleX guarantees data authenticity, prevents unauthorized modifications, and empowers users with full control over their digital legacies. Whether it is a heartfelt message for future generations, a time-locked contract, or a digital will, the platform ensures that significant information remains protected and is delivered at the appropriate moment.
+
+<br>
 <br>
 
 # Contact
