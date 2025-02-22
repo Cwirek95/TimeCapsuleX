@@ -2,6 +2,12 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeCapsuleX.Common.Core", "Common\TimeCapsuleX.Common.Core\TimeCapsuleX.Common.Core.csproj", "{FAEAF1BB-1854-4F77-809C-72ACA9F11EC0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeCapsuleX.TimeBased.Core", "TimeBased\TimeCapsuleX.TimeBased.Core\TimeCapsuleX.TimeBased.Core.csproj", "{A7B42D18-0E44-43BB-AF6D-56FD4E6DCA5D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{20B53A5D-B3FA-4B0E-BC82-B73A128F4F16}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TimeBased", "TimeBased", "{E6A5E82F-3ADF-4289-8412-2D091BA5B436}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +18,13 @@ Global
 		{FAEAF1BB-1854-4F77-809C-72ACA9F11EC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FAEAF1BB-1854-4F77-809C-72ACA9F11EC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FAEAF1BB-1854-4F77-809C-72ACA9F11EC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7B42D18-0E44-43BB-AF6D-56FD4E6DCA5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7B42D18-0E44-43BB-AF6D-56FD4E6DCA5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7B42D18-0E44-43BB-AF6D-56FD4E6DCA5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7B42D18-0E44-43BB-AF6D-56FD4E6DCA5D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FAEAF1BB-1854-4F77-809C-72ACA9F11EC0} = {20B53A5D-B3FA-4B0E-BC82-B73A128F4F16}
+		{A7B42D18-0E44-43BB-AF6D-56FD4E6DCA5D} = {E6A5E82F-3ADF-4289-8412-2D091BA5B436}
 	EndGlobalSection
 EndGlobal
