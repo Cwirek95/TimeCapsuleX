@@ -86,3 +86,7 @@ fabric.properties
 # node_modules and .angular
 **/node_modules/
 **/.angular/
+
+# rider
+**/bin/
+**/obj/
