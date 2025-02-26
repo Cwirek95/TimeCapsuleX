@@ -2,12 +2,12 @@
 
 namespace TimeCapsuleX.TimeBased.Core.BusinessRules;
 
-internal sealed class CapsuleCannotBeWithoutItsContents : IBusinessRule
+internal sealed class CapsuleCannotBeWithoutItsContentsRule : IBusinessRule
 {
     private readonly string? _title;
     private readonly string? _message;
     
-    internal CapsuleCannotBeWithoutItsContents(string? title, string? message)
+    internal CapsuleCannotBeWithoutItsContentsRule(string? title, string? message)
     {
         _title = title;
         _message = message;

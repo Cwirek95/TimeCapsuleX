@@ -2,12 +2,12 @@
 
 namespace TimeCapsuleX.TimeBased.Core.BusinessRules;
 
-internal sealed class CapsuleOpeningDateMustBeAtLeast24HoursLaterThanCreationDate : IBusinessRule
+internal sealed class CapsuleOpeningDateMustBeAtLeast24HoursLaterThanCreationDateRule : IBusinessRule
 {
     private readonly DateTimeOffset _openingDate;
     private readonly DateTimeOffset _creationDate;
 
-    internal CapsuleOpeningDateMustBeAtLeast24HoursLaterThanCreationDate(DateTimeOffset openingDate, DateTimeOffset creationDate)
+    internal CapsuleOpeningDateMustBeAtLeast24HoursLaterThanCreationDateRule(DateTimeOffset openingDate, DateTimeOffset creationDate)
     {
         _openingDate = openingDate;
         _creationDate = creationDate;
