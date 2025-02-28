@@ -10,7 +10,7 @@ internal sealed class CapsuleCannotBeOpenedBeforeOpeningDateRule : IBusinessRule
     internal CapsuleCannotBeOpenedBeforeOpeningDateRule(DateTimeOffset openingDate, DateTimeOffset occurrenceDate)
     {
         _openingDate = openingDate;
-        _occurrenceDate = openingDate;
+        _occurrenceDate = occurrenceDate;
     }
 
     public bool IsMet() => _occurrenceDate > _openingDate;
