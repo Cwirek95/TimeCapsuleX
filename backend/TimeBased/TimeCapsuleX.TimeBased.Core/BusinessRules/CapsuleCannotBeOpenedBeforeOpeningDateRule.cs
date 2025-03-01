@@ -13,7 +13,7 @@ internal sealed class CapsuleCannotBeOpenedBeforeOpeningDateRule : IBusinessRule
         _occurrenceDate = occurrenceDate;
     }
 
-    public bool IsMet() => _occurrenceDate > _openingDate;
+    public bool IsMet() => _occurrenceDate >= _openingDate;
 
     public string Error => "The capsule cannot be opened before its opening date";
 }

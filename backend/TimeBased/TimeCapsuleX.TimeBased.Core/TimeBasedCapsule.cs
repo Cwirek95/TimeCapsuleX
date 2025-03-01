@@ -32,10 +32,9 @@ public sealed class TimeBasedCapsule
         CreatedAt = createdAt;
     }
 
-    public static TimeBasedCapsule Create(Guid creatorId, Guid recipientId, DateTimeOffset openingDate, string title, string message)
+    public static TimeBasedCapsule Create(Guid creatorId, Guid recipientId, DateTimeOffset openingDate,
+        string title, string message, DateTimeOffset creationDate)
     {
-        var creationDate = DateTimeOffset.UtcNow;
-        
         BusinessRuleValidator.Validate(new CapsuleCannotBeWithoutItsContentsRule(title, message));
         BusinessRuleValidator.Validate(new CapsuleOpeningDateMustBeAtLeast24HoursLaterThanCreationDateRule(openingDate, creationDate));
 
@@ -49,13 +48,11 @@ public sealed class TimeBasedCapsule
             creationDate);
     }
 
-    public void Open()
+    public void Open(DateTimeOffset occurrenceDate)
     {
-        var occurenceDate = DateTimeOffset.UtcNow;
-        
         BusinessRuleValidator.Validate(new OnlyUnopenedCapsuleCanBeOpenedRule(IsOpened));
-        BusinessRuleValidator.Validate(new CapsuleCannotBeOpenedBeforeOpeningDateRule(OpeningDate, occurenceDate));
+        BusinessRuleValidator.Validate(new CapsuleCannotBeOpenedBeforeOpeningDateRule(OpeningDate, occurrenceDate));
 
-        OpenedAt = occurenceDate;
+        OpenedAt = occurrenceDate;
     }
 }
