@@ -9,6 +9,7 @@
 [Introduction](#introduction) <br>
 [Goals and motivations](#goals-and-motivations) <br>
 [Roadmap](#roadmap) <br>
+[Backend](#backend) <br>
 [Contact](#contact) <br>
 
  <br>
@@ -62,6 +63,26 @@ By utilizing blockchain technology, TimeCapsuleX guarantees data authenticity, p
 | 9.  | UI/UX improvements              | ![Static Badge](https://img.shields.io/badge/Low-25a244) |
 | 10. | End-to-end testing                                              | ![Static Badge](https://img.shields.io/badge/Low-25a244) |
 | 11. | Prepare a schedule for work on subsequent phases of the project                    | ![Static Badge](https://img.shields.io/badge/Low-25a244) |
+
+<br>
+<br>
+
+# Backend
+
+### Architecture
+The business part of the application was designed based on the Modular Monolith architecture pattern with a mix of Vertical Slice Architecture and Clean Architecture.
+- Each module is sliced vertically ensuring that the logic of each process is separated and organized in a separate location
+- The structure of the modules is divided according to the Clean Architecture ensuring an appropriate division of responsibilities and relationships
+- Communication between modules is through IntegrationsEvents using EventBus
+- The core of the entire application is IntegrationCapsule, which is responsible for the processes of publishing and reading capsules
+
+<br>
+
+<p align="center">
+    <img src="assets/images/subdomains.png" alt="Subdomains" border="0" style="width:80%; height:auto;">
+</p>
+
+<br>
 
 <br>
 <br>
