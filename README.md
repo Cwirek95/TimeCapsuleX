@@ -84,6 +84,22 @@ The business part of the application was designed based on the Modular Monolith 
 
 <br>
 
+### TimeBased Capsules
+
+- Basic capsule model that can be opened after a period of time
+- It can only be opened by the person specified when it was created
+- Once the capsule has been opened, it can also be shared publicly with others
+- In the basic version only text messages, later also the possibility of file storage
+
+Sample processes for this capsule type:
+<br>
+
+<p align="center">
+    <img src="assets/images/time-based-capsule-processess.png" alt="Subdomains" border="0" style="width:80%; height:auto;">
+</p>
+
+<br>
+
 <br>
 <br>
 
