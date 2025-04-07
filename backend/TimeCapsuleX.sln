@@ -20,6 +20,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeCapsuleX.Common.Infrast
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeCapsuleX.Common.IntegrationTests", "Common\Tests\TimeCapsuleX.Common.IntegrationTests\TimeCapsuleX.Common.IntegrationTests.csproj", "{DCAB952B-0C24-41DD-9B1F-899C7393142F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeCapsuleX.Common.Infrastructure.IntegrationTests", "Common\Tests\TimeCapsuleX.Common.Infrastructure.IntegrationTests\TimeCapsuleX.Common.Infrastructure.IntegrationTests.csproj", "{25000A55-026D-48ED-9E39-D3E66D77D85D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +52,10 @@ Global
 		{DCAB952B-0C24-41DD-9B1F-899C7393142F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DCAB952B-0C24-41DD-9B1F-899C7393142F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DCAB952B-0C24-41DD-9B1F-899C7393142F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25000A55-026D-48ED-9E39-D3E66D77D85D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25000A55-026D-48ED-9E39-D3E66D77D85D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25000A55-026D-48ED-9E39-D3E66D77D85D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25000A55-026D-48ED-9E39-D3E66D77D85D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{FAEAF1BB-1854-4F77-809C-72ACA9F11EC0} = {20B53A5D-B3FA-4B0E-BC82-B73A128F4F16}
@@ -60,5 +66,6 @@ Global
 		{643B4582-3E88-4297-8BB8-C7BEB6D532D1} = {F15E8130-08D1-493A-95E6-70C91CF492AA}
 		{EDB372D1-B08D-453A-9C77-5E5D02B331C7} = {20B53A5D-B3FA-4B0E-BC82-B73A128F4F16}
 		{DCAB952B-0C24-41DD-9B1F-899C7393142F} = {42665DB0-AA24-4198-A6DC-55ED587A5178}
+		{25000A55-026D-48ED-9E39-D3E66D77D85D} = {42665DB0-AA24-4198-A6DC-55ED587A5178}
 	EndGlobalSection
 EndGlobal

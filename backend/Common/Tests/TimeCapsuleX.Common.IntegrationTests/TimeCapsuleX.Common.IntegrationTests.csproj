@@ -8,6 +8,7 @@
 
     <ItemGroup>
       <PackageReference Include="Bogus" Version="35.6.2" />
+      <PackageReference Include="JetBrains.Annotations" Version="2025.1.0-eap1" />
       <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.3.0" />
       <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="9.0.3" />
       <PackageReference Include="Microsoft.AspNetCore.TestHost" Version="9.0.3" />
